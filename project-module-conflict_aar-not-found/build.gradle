@@ -1,0 +1,7 @@
+def rootProject = project
+def mavenRepoPath = rootProject.file("repo")
+allprojects { someProject ->
+  someProject.repositories.maven {
+    url mavenRepoPath
+  }
+}

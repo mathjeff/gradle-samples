@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jeff.jeff-loader</groupId>
+  <artifactId>jeff-loader</artifactId>
+  <version>1.0.0</version>
+  <packaging>aar</packaging>
+  <name>Jeff Loader</name>
+  <description>Sample Loader</description>
+  <dependencies>
+    <dependency>
+      <groupId>jeff.jeff-core</groupId>
+      <artifactId>jeff-core</artifactId>
+      <version>1.0.0</version>
+      <type>aar</type>
+    </dependency>
+  </dependencies>
+</project>
