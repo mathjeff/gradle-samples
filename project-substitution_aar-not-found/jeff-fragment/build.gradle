@@ -1,0 +1,38 @@
+apply plugin: "com.android.library"
+
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.2.1'
+  }
+}
+
+repositories {
+  google()
+  jcenter()
+}
+
+android {
+  compileSdkVersion 14
+}
+
+dependencies {
+  if (project.hasProperty("noAarDepType")) {
+    api("jeff.jeff-core:jeff-core:1.0.0")
+  } else {
+    api("jeff.jeff-core:jeff-core:1.0.0@aar")
+  }
+}
+
+
+project.group = "jeff.jeff-fragment"
+project.version = "1.1.0-alpha01"
+
+project.configurations.all {
+  resolutionStrategy.dependencySubstitution {
+    substitute(module("jeff.jeff-core:jeff-core:1.0.0")).with(project(":jeff-core"))
+  }
+}
