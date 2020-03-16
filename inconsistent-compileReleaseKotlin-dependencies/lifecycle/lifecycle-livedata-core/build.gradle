@@ -1,0 +1,14 @@
+task doResolve {
+  if (!project.hasProperty("resolveFirst")) {
+    dependsOn(":activity:activity-ktx:compileReleaseKotlin")
+  }
+  doLast {
+    def runnerProject = project
+    def mavenId = "androidx.lifecycle:lifecycle-livedata-core:2.3.0-Jeff"
+    //def mavenId = "androidx.arch.core:core-runtime:2.1.0-alpha01"
+    def configuration = runnerProject.configurations.detachedConfiguration(
+      runnerProject.dependencies.create(mavenId)
+    )
+    System.out.println("resolved: " + configuration.resolvedConfiguration.resolvedArtifacts)
+  }
+}

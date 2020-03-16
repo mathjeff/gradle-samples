@@ -1,0 +1,32 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+buildscript {
+    def supportRootFolder = project.projectDir.getParentFile()
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+
+    apply from: "build_dependencies.gradle"
+
+    dependencies {
+        classpath build_libs.kotlin.gradle_plugin
+    }
+}
+
+ext.supportRootFolder = project.projectDir.getParentFile()
+apply from: 'repos.gradle'
+apply plugin: "kotlin"
+apply from: "kotlin-dsl-dependency.gradle"
+
+allprojects {
+    repos.addMavenRepositories(repositories)
+
+    tasks.withType(KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+}
+

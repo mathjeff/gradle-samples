@@ -1,0 +1,27 @@
+def supportRoot = ext.supportRootFolder
+if (supportRoot == null) {
+    throw new RuntimeException("variable supportRootFolder is not set. you must set it before" +
+            " including this script")
+}
+
+def checkoutRoot = "${ext.supportRootFolder}/../.."
+ext.repos = new Properties()
+ext.repos.checkoutRoot = checkoutRoot
+ext.repos.prebuiltsRoot = "${checkoutRoot}/prebuilts"
+ext.repos.supportRoot = supportRoot
+
+def addMavenRepositories(RepositoryHandler handler) {
+    handler.maven {
+        url "${repos.supportRoot}/repo"
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+
+    handler.jcenter()
+    handler.mavenCentral()
+    handler.google()
+}
+
+ext.repos.addMavenRepositories = this.&addMavenRepositories

@@ -1,0 +1,51 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    buildTypes {
+        debug {
+            testCoverageEnabled = false // Breaks Kotlin compiler.
+        }
+    }
+}
+
+android {
+  compileSdkVersion "android-29"
+  buildToolsVersion "29.0.3"
+  defaultConfig {
+    targetSdkVersion 28
+    minSdkVersion 28
+  }
+}
+
+dependencies {
+    api("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-Jeff")
+    //api("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0-alpha01")
+}
+
+afterEvaluate {
+  def t = project.tasks["compileReleaseKotlin"]
+  if (project.hasProperty("resolveFirst")) {
+    t.dependsOn(":lifecycle:lifecycle-livedata-core:doResolve")
+  }
+  t.doFirst {
+    def count = t.inputs.files.files.size
+    def contains = false
+    System.out.println("Inputs of " + t + " (" + count + "):")
+    def expectedName = "core-runtime-2.1.0-api.jar"
+    t.inputs.files.files.each { f ->
+      if (f.name == expectedName) {
+        contains = true
+      }
+      System.out.println("Input of " + t + ": " + f)
+    }
+    System.out.println("End of inputs of " + t + "(" + count + "):")
+    if (contains) {
+      System.out.println("Jeff pass - task " + t + " contains " + expectedName)
+    } else {
+      System.out.println("Jeff fail - task " + t + " does not contain " + expectedName)
+    }
+  }
+}

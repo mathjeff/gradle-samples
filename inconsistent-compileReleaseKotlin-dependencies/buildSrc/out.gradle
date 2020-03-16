@@ -1,0 +1,16 @@
+def init = new Properties()
+ext.init = init
+
+def chooseOutDir(subdir = "") {
+    def outDir = System.env.OUT_DIR
+    if (outDir == null) {
+        outDir = new File("${buildscript.getSourceFile().parent}/../out${subdir}")
+    } else {
+        outDir = new File(outDir)
+    }
+    project.ext.outDir = outDir
+    buildDir = new File(outDir, "$project.name/build")
+                .getCanonicalFile()
+}
+
+ext.init.chooseOutDir = this.&chooseOutDir
