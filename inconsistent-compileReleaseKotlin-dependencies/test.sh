@@ -17,6 +17,8 @@ else
   exit 1
 fi
 
+rm out -rf
+
 echo
 echo starting second build
 ./gradlew --no-daemon -PresolveFirst :activity:activity-ktx:compileReleaseKotlin :lifecycle:lifecycle-livedata:doResolve 2>&1 | tee log2
