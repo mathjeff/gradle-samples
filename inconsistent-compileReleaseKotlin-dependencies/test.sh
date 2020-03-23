@@ -1,9 +1,10 @@
 set -e
 
 echo starting test.sh
-rm -rf out log log2
-
 cd "$(dirname $0)"
+
+rm -rf out log log2 .gradle activity/activity-ktx/build buildSrc/.gradle buildSrc/build
+
 export OUT_DIR=out
 export GRADLE_USER_HOME=$OUT_DIR/.gradle
 mkdir -p $OUT_DIR
@@ -17,7 +18,7 @@ else
   exit 1
 fi
 
-rm out -rf
+rm -rf out log log2 .gradle activity/activity-ktx/build buildSrc/.gradle buildSrc/build
 
 echo
 echo starting second build
