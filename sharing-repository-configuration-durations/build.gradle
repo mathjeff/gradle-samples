@@ -1,0 +1,47 @@
+// Adding repositories directly to subprojects:
+if (project.hasProperty("repoChildrenCopy")) {
+  allprojects {
+    repositories {
+      google()
+      mavenLocal()
+      jcenter()
+    }
+  }
+}
+
+// Adding repositories to the root project and referencing the from subprojects runs more quickly:
+if (project.hasProperty("repoChildrenReference")) {
+  repositories {
+    google()
+    mavenLocal()
+    jcenter()
+  }
+  subprojects { subproject ->
+    subproject.repositories.addAll(subproject.rootProject.repositories)
+  }
+}
+
+// A different, but also interesting observation that we made, is
+// that calling System.getenv 3x on each project also adds about 0.08s to the build
+if (project.hasProperty("childrenAccessSysEnv")) {
+  allprojects {
+           
+    if (System.getenv("JeffsUnusedProperty") != null) {
+    } 
+    if (System.getenv("JeffsUnusedProperty") != null) {
+    } 
+    if (System.getenv("JeffsUnusedProperty") != null) {
+    } 
+  }
+}
+
+// A different, but also interesting observation that we made, is
+// that calling System.getenv 1200 times also adds about 0.08s to the build
+if (project.hasProperty("selfAccessSysEnv")) {
+  for (def i = 0; i < 1200; i++) {
+    if (System.getenv("JeffsUnusedProperty") != null) {
+    }
+  }
+}
+
+
