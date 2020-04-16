@@ -1,0 +1,6 @@
+allprojects { subproject ->
+  apply plugin: "java"
+  System.out.println("print a in " + subproject)
+  Thread.sleep(20)
+  System.out.println("print b in " + subproject)
+}
