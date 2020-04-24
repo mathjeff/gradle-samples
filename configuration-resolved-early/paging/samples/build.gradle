@@ -1,0 +1,24 @@
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:4.0.0-beta04'
+  }
+}
+
+apply plugin: "com.android.library"
+
+repositories {
+  google()
+  jcenter()
+}
+
+android {
+  compileSdkVersion "android-29"
+  defaultConfig {
+    targetSdkVersion(29)
+  }
+}
+
