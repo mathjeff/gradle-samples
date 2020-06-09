@@ -1,0 +1,13 @@
+apply plugin: "java"
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation "junit:junit:4.12"
+}
+
+test {
+  maxHeapSize = "256m"
+}
