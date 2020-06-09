@@ -1,13 +1,39 @@
-apply plugin: "java"
+//apply plugin: "java"
+
+apply plugin: "android-library"
 
 repositories {
   jcenter()
+}
+
+buildscript {
+  dependencies {
+    classpath "com.android.tools.build:gradle:4.0.0"
+  }
+  repositories {
+    jcenter()
+    google()
+  }
+}
+
+android {
+  compileSdkVersion 29
+  buildToolsVersion "29.0.3"
 }
 
 dependencies {
   implementation "junit:junit:4.12"
 }
 
-test {
-  maxHeapSize = "256m"
+project.tasks.withType(Test) { task ->
+  task.doFirst {
+    def desiredHeap = "128m"
+    println("Trying to set heap size of " + task + " to " + desiredHeap)
+    task.maxHeapSize == desiredHeap
+    println("")
+    println("Configured heap size of " + task + " (" + task.getClass() + ") = " + task.maxHeapSize)
+    println("")
+    println('Run `ps -ef | grep "Gradle Test Executor" | grep --color Xmx` to see the true heap size. Was it set successfully?')
+  }
 }
+

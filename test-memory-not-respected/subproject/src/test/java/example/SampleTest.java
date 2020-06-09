@@ -6,7 +6,7 @@ public final class SampleTest {
 
   @Test
   public void testMe() throws InterruptedException {
-    Thread.sleep(60000);
+    Thread.sleep(600000);
   }
 
 }
