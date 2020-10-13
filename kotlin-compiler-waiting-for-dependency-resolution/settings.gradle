@@ -1,0 +1,39 @@
+rootProject.name = "androidx"
+
+/////////////////////////////
+//
+// Buildscript utils
+//
+/////////////////////////////
+
+
+// Calling includeProject(name, filePath) is shorthand for:
+//
+//   include(name)
+//   project(name).projectDir = new File(filePath)
+//
+// Note that <name> directly controls the Gradle project name, and also indirectly sets:
+//   the project name in the IDE
+//   the Maven artifactId
+//
+def includeProject(name, filePath) {
+    settings.include(name)
+
+    def file
+    if (filePath instanceof String) {
+        file = new File(rootDir, filePath)
+    } else {
+        file = filePath
+    }
+    project(name).projectDir = file
+}
+
+
+/////////////////////////////
+//
+// Libraries
+//
+/////////////////////////////
+
+includeProject(":project-with-deps-and-source", "project-with-deps-and-source")
+includeProject(":project-with-source", "project-with-source")

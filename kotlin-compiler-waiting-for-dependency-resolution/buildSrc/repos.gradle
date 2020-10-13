@@ -1,0 +1,13 @@
+ext.repos = new Properties()
+
+def addMavenRepositories(RepositoryHandler handler) {
+    handler.maven {
+        url "${project.rootProject.projectDir}/repo"
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+}
+
+ext.repos.addMavenRepositories = this.&addMavenRepositories

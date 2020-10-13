@@ -1,0 +1,15 @@
+buildscript {
+    apply from: 'buildSrc/repos.gradle'
+    repos.addMavenRepositories(repositories)
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.71"
+    }
+}
+
+allprojects {
+    repos.addMavenRepositories(repositories)
+}
+
+apply from: "buildSrc/out.gradle"
+init.chooseOutDir()
