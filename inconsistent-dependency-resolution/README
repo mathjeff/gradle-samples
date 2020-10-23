@@ -1,5 +1,7 @@
 This project demonstrates Gradle resolving configurations inconsistently between runs
 
+This inconsistency seems to reproduce more often when systen has high CPU load
+
 This inconsistency is not observed with Gradle 6.5.1 but is observed with Gradle 6.6.1.
 In particular, we observe that it is introduced by https://github.com/gradle/gradle/commit/167cc0186ff92b5428275788387c885c0752f54f#diff-d3d7cfec0e164db932fe2668614582028bb56055a81cf8ba1987ae0c7f6eb23dR124
 
