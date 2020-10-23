@@ -28,30 +28,7 @@ plugins {
 
 println("Jeff paging/runtime evaluation start")
 dependencies {
-/*
-    api(project(":paging:paging-common"))
-    // Ensure that the -ktx dependency graph mirrors the Java dependency graph
-    api(project(":paging:paging-common-ktx"))
 
-    api("androidx.lifecycle:lifecycle-runtime-ktx:2.2.0")
-    api("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
-    api("androidx.recyclerview:recyclerview:1.2.0-alpha04")
-    api(KOTLIN_STDLIB)
-    api(KOTLIN_COROUTINES_ANDROID)
-    implementation("androidx.core:core-ktx:1.2.0")
-
-    androidTestImplementation(project(":internal-testutils-common"))
-    androidTestImplementation(project(":internal-testutils-ktx"))
-    androidTestImplementation(project(":internal-testutils-paging"))
-    androidTestImplementation(projectOrArtifact(":lifecycle:lifecycle-runtime-testing"))
-    androidTestImplementation(ANDROIDX_TEST_CORE)
-    androidTestImplementation(ANDROIDX_TEST_EXT_JUNIT)
-    androidTestImplementation(ANDROIDX_TEST_RUNNER)
-    androidTestImplementation("androidx.arch.core:core-testing:2.1.0")
-    androidTestImplementation(KOTLIN_TEST)
-    androidTestImplementation(KOTLIN_COROUTINES_TEST)
-    androidTestImplementation(JUNIT)
-*/
 }
 
 android {

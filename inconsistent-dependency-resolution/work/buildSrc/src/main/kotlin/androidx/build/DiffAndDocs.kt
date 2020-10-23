@@ -2,7 +2,7 @@ package androidx.build
 import androidx.build.Strategy.Prebuilts
 import androidx.build.Strategy.TipOfTree
 import androidx.build.doclava.DoclavaTask
-import androidx.build.docs.GenerateDocsTask
+//import androidx.build.docs.GenerateDocsTask
 import androidx.build.gradle.isRoot
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
@@ -28,11 +28,11 @@ class DiffAndDocs private constructor(
 ) {
     private val docsProject: Project?
     private val rules: List<PublishDocsRules>
-    private val docsTasks: MutableMap<String, TaskProvider<GenerateDocsTask>> = mutableMapOf()
+    private val docsTasks: MutableMap<String, TaskProvider<DoclavaTask>> = mutableMapOf()
     init {
         val doclavaConfiguration = root.configurations.create("doclava")
         doclavaConfiguration.dependencies.add(root.dependencies.create(DOCLAVA_DEPENDENCY))
-        rules = additionalRules + TIP_OF_TREE
+        rules = additionalRules //+ TIP_OF_TREE
         docsProject = root.findProject(":docs-fake")
         rules.forEach { rule ->
             val generateDocsTask = createGenerateDocsTask(
@@ -101,13 +101,17 @@ class DiffAndDocs private constructor(
     }
     private fun setupDocsProject() {
         docsProject?.afterEvaluate { docs ->
+            System.out.println("Jeff DocsProject afterEvaluate")
             val appExtension = docs.extensions.findByType(AppExtension::class.java)
                 ?: throw GradleException("Android app plugin is missing on docsProject")
             rules.forEach { rule ->
+                System.out.println("Jeff rules foreach found rule " + rule + " (" + rule.name + ")")
                 appExtension.productFlavors.register(rule.name)
             }
             appExtension.applicationVariants.all { appVariant ->
+                System.out.println("Jeff variants foreach found variant " + appVariant + " (" + appVariant.flavorName + ")")
                 val taskProvider = docsTasks[appVariant.flavorName]
+                System.out.println("Jeff taskProvider = " + taskProvider + " for variant " + appVariant.flavorName)
                 if (appVariant.buildType.getName() == "release" && taskProvider != null) {
                     registerAndroidProjectForDocsTask(taskProvider, appVariant)
                     val runtimeConfiguration = appVariant.runtimeConfiguration
@@ -161,32 +165,31 @@ private fun registerAndroidProjectForDocsTask(
     taskProvider: TaskProvider<out Javadoc>,
     releaseVariant: BaseVariant
 ) {
-    taskProvider.configure { task ->
-        val javaCompileProvider = releaseVariant.javaCompileProvider
-        val project = task.project
-        /*task.include { fileTreeElement ->
-            true
-        }*/
-        val files = project.files(
-            releaseVariant.getCompileClasspath(null) +
-                task.project.files(javaCompileProvider.get().destinationDir)
+    val task = taskProvider.get()
+    val javaCompileProvider = releaseVariant.javaCompileProvider
+    val project = task.project
+    val files = releaseVariant.getCompileClasspath(null)
 
-            /*releaseVariant.getCompileClasspath(null).filter { f ->
-                !f.path.contains("/prebuilts/")
-            } + task.project.files(javaCompileProvider.get().destinationDir)*/
-        )
-
-        task.classpath += files
-        task.doFirst {
-            System.out.println("Jeff registered android project getting sources:")
-            files.forEach { f ->
-                System.out.println("" + f)
-            }
-            System.out.println("Jeff registered android project done getting sources")
+    task.classpath += files
+    task.dependsOn(files)
+    val compileTask = javaCompileProvider.get()
+    task.dependsOn(compileTask)
+    System.out.println("Jeff adding dependency from docs task " + task + " to compile task " + compileTask)
+    task.doFirst {
+        System.out.println("Jeff registered android project getting sources:")
+        files.forEach { f ->
+            System.out.println("" + f)
         }
-        val compileDestDir = javaCompileProvider.get().destinationDir
-        System.out.println("Compile dest dir = " + compileDestDir)
+        System.out.println("Jeff registered android project done getting sources")
+        System.out.println("Jeff registered android project getting sources #2:")
+        val files2 = releaseVariant.getCompileClasspath(null)
+        files2.forEach { f ->
+            System.out.println("" + f)
+        }
+        System.out.println("Jeff registered android project done getting sources #2")
     }
+    //val compileDestDir = javaCompileProvider.get().destinationDir
+    //System.out.println("Compile dest dir = " + compileDestDir)
 }
 
 private fun createGenerateDocsTask(
@@ -194,11 +197,11 @@ private fun createGenerateDocsTask(
     doclavaConfig: Configuration,
     destDir: File,
     taskName: String = "generateDocs"
-): TaskProvider<GenerateDocsTask> =
-    project.tasks.register(taskName, GenerateDocsTask::class.java) {
+): TaskProvider<DoclavaTask> =
+    project.tasks.register(taskName, DoclavaTask::class.java) {
         it.apply {
+            // it seems that this dependsOn(doclavaConfig) is required for reproducing the problem in this smaller reproduction case
             dependsOn(doclavaConfig)
-            setDocletpath(doclavaConfig.resolve())
             destinationDir = destDir
         }
     }

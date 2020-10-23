@@ -12,7 +12,6 @@ plugins {
 println("Jeff leanback evaluation starting")
 dependencies {
     api("androidx.paging:paging-runtime:3.0.0-alpha02")
-
 }
 
 android {

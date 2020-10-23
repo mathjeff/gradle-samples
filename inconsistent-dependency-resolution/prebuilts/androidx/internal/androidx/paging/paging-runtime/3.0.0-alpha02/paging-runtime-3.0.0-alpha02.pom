@@ -9,7 +9,7 @@
   <groupId>androidx.paging</groupId>
   <artifactId>paging-runtime</artifactId>
   <version>3.0.0-alpha02</version>
-  <packaging>aar</packaging>
+  <packaging>jar</packaging>
   <name>Android Paging-Runtime</name>
   <description>Android Paging-Runtime</description>
   <url>https://developer.android.com/topic/libraries/architecture/index.html</url>

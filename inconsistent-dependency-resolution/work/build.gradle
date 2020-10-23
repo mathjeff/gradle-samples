@@ -25,3 +25,7 @@ init.chooseOutDir()
 
 apply plugin: AndroidXRootPlugin
 project(":docs-fake").evaluationDependsOn(":paging:paging-runtime")
+
+afterEvaluate {
+  tasks["publicDocsTask"].dependsOn(":leanback:leanback-paging:compileReleaseJavaWithJavac")
+}
