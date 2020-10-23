@@ -1,0 +1,16 @@
+/*
+ */
+def init = new Properties()
+ext.init = init
+def chooseOutDir(subdir = "") {
+    /*
+     */
+    def outDir = System.env.OUT_DIR
+    if (outDir == null) {
+        outDir = new File(outDir)
+    }
+    buildDir = new File(outDir, "$project.name/build")
+    subprojects {
+    }
+}
+ext.init.chooseOutDir = this.&chooseOutDir

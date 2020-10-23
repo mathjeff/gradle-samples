@@ -1,0 +1,11 @@
+def findGradleKotlinDsl() {
+    def dashIndex = project.gradle.getGradleVersion().indexOf("-")
+    def kotlinDslVersion = dashIndex == -1 ? project.gradle.getGradleVersion()
+            : project.gradle.getGradleVersion().substring(0, dashIndex)
+    def kotlinDsl = "" + project.gradle.getGradleHomeDir() + "/lib/gradle-kotlin-dsl-" +
+                    kotlinDslVersion + ".jar"
+    /*if (!project.file(kotlinDsl).exists()) {
+    }*/
+    return project.files(kotlinDsl)
+}
+ext.findGradleKotlinDsl = this.&findGradleKotlinDsl

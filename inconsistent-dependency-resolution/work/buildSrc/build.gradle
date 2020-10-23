@@ -1,0 +1,81 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+buildscript {
+    project.ext.supportRootFolder = project.projectDir.getParentFile()
+    repositories {
+        maven {
+            url "${supportRootFolder}/../prebuilts/androidx/external"
+        }
+    }
+    apply from: "build_dependencies.gradle"
+    dependencies {
+        classpath build_libs.kotlin.gradle_plugin
+    }
+    configurations.classpath.resolutionStrategy {
+    }
+}
+apply from: "out.gradle"
+init.chooseOutDir()
+apply from: 'repos.gradle'
+apply plugin: "kotlin"
+apply from: "kotlin-dsl-dependency.gradle"
+allprojects {
+    repos.addMavenRepositories(repositories)
+    tasks.withType(KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs += [
+            ]
+        }
+    }
+}
+configurations {
+    cacheableImplementation {
+    }
+    cacheableRuntime {
+    }
+}
+
+dependencies {
+    api "com.android.tools.build:gradle:4.2.0-alpha06"
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0"
+    implementation gradleApi()
+    //cacheableImplementation build_libs.dex_member_list
+    // root project doesn't need to re-resolve them and their dependencies on every build
+    compileOnly(findGradleKotlinDsl()) // Only one file in this configuration, no need to cache it
+}
+apply plugin: "java-gradle-plugin"
+/*sourceSets {
+}
+gradlePlugin {
+}
+def saveConfigurationResolution(configuration, destFile) {
+}*/
+/*def parseConfigurationResolution(savedFile) {
+    def savedText = savedFile.text
+    def filenames = savedText.split("\n")
+    def dependencies = filenames.collect { filename ->
+        project.dependencies.create(project.files(filename))
+    }
+}*/
+/*def resolveConfiguration(configuration) {
+    def resolvedName = configuration.name
+    def cacheDir = new File(project.buildDir, "/" + resolvedName)
+    def inputsFile = new File(cacheDir, "/deps")
+    def outputsFile = new File(cacheDir, "/result")
+    def inputText = fingerprintConfiguration(configuration)
+    if (!inputsFile.exists() || inputsFile.text != inputText) {
+    }
+    def result = parseConfigurationResolution(outputsFile)
+}
+def fingerprintConfiguration(configuration) {
+}
+def loadConfigurationQuicklyInto(fromConf, toConf) {
+    def resolved = resolveConfiguration(fromConf)
+    resolved.each { dep ->
+        project.dependencies.add(toConf.name, dep)
+    }
+}*/
+//loadConfigurationQuicklyInto(configurations.cacheableImplementation, configurations.implementation)
+//loadConfigurationQuicklyInto(configurations.cacheableRuntime, configurations.runtime)
+/*project.tasks.withType(Jar) { task ->
+}*/

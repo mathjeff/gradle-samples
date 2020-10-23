@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.paging",
+    "module": "paging-runtime",
+    "version": "3.0.0-alpha07",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId:": "6860046"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.paging",
+          "module": "paging-common-ktx",
+          "version": {
+            "requires": "3.0.0-alpha07"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "paging-runtime-3.0.0-alpha07.aar",
+          "url": "paging-runtime-3.0.0-alpha07.aar",
+          "size": 66871,
+          "sha512": "c82dae0c01f79092e899df0f323b639655819138164668560ba1a7e1d0c4b9669ecb4e3755020f494e6cdc668235cab4d17877badfad83c4fbcd663950266048",
+          "sha256": "4d7b691e3b3abef07e0d9de090ea81add9cf52d0ce377f611114b58a25ded86b",
+          "sha1": "9c0a0612835196c81b11a098c8581f4c6b75c462",
+          "md5": "86214c3d4c984c7031a3c066d7cb383f"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.paging",
+          "module": "paging-common-ktx",
+          "version": {
+            "requires": "3.0.0-alpha07"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "paging-runtime-3.0.0-alpha07.aar",
+          "url": "paging-runtime-3.0.0-alpha07.aar",
+          "size": 66871,
+          "sha512": "c82dae0c01f79092e899df0f323b639655819138164668560ba1a7e1d0c4b9669ecb4e3755020f494e6cdc668235cab4d17877badfad83c4fbcd663950266048",
+          "sha256": "4d7b691e3b3abef07e0d9de090ea81add9cf52d0ce377f611114b58a25ded86b",
+          "sha1": "9c0a0612835196c81b11a098c8581f4c6b75c462",
+          "md5": "86214c3d4c984c7031a3c066d7cb383f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "paging-runtime-3.0.0-alpha07-sources.jar",
+          "url": "paging-runtime-3.0.0-alpha07-sources.jar",
+          "size": 29132,
+          "sha512": "29b1ba852cef677c908f56208a8fd682651ac3b0b1033d516cd0f43c2f54a99f22a9c008a4e6e3e51b2ae74ee690794d889f34547cc992b4d5f365e8eefc22e5",
+          "sha256": "e50adf4ebc3a7c714eafa5171849af884252694cc51959fd21a574a8bc318f52",
+          "sha1": "2478f86d8af710d2680f615da9c476762ee70c75",
+          "md5": "e52581ebee7cc24580bb5481b42e04fe"
+        }
+      ]
+    }
+  ]
+}

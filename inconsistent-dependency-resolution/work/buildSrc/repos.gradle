@@ -1,0 +1,15 @@
+ext.repos = new Properties()
+ext.repos.prebuiltsRoot = new File(supportRootFolder.parentFile, "prebuilts").absolutePath
+def addMavenRepositories(RepositoryHandler handler) {
+    handler.maven {
+        url "${repos.prebuiltsRoot}/androidx/internal"
+    }
+    handler.ivy {
+        url "${repos.prebuiltsRoot}/androidx/external/no-group"
+    }
+    def buildDokka = System.getenv("BUILD_DOKKA") != null
+    handler.maven {
+        url "${repos.prebuiltsRoot}/androidx/external"
+    }
+}
+ext.repos.addMavenRepositories = this.&addMavenRepositories

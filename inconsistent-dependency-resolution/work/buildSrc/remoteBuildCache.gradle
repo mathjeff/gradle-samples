@@ -1,0 +1,3 @@
+/*def useRemoteBuildCache = System.getenv('USE_ANDROIDX_REMOTE_BUILD_CACHE') == 'true'
+if (useRemoteBuildCache) {
+}*/

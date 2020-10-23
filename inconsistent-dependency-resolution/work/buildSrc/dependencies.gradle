@@ -1,0 +1,6 @@
+def libs = [:]
+libs.exclude_bytebuddy = {
+}
+libs.exclude_for_espresso = {
+}
+rootProject.ext['libs'] = libs

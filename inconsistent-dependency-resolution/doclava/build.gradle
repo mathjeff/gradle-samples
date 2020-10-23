@@ -1,0 +1,18 @@
+plugins {
+    id("java")
+    id("maven-publish")
+}
+
+group = 'com.android'
+version = '1.0.6'
+
+buildDir = file("${System.env.OUT_DIR}/gradle/external/doclava/build").getCanonicalFile()
+
+repositories {
+    maven { url file('../prebuilts/androidx/external').absolutePath }
+}
+
+tasks.withType(Jar) { task ->
+    task.reproducibleFileOrder = true
+    task.preserveFileTimestamps = false
+}

@@ -1,0 +1,47 @@
+pluginManagement {
+    repositories {
+        maven {
+            url = new File(buildscript.sourceFile.parent + "/../../prebuilts/androidx/external").getCanonicalFile()
+        }
+    }
+}
+
+rootProject.name = "androidx"
+
+/////////////////////////////
+//
+// Buildscript utils
+//
+/////////////////////////////
+
+
+// Calling includeProject(name, filePath) is shorthand for:
+//
+//   include(name)
+//   project(name).projectDir = new File(filePath)
+//
+// Note that <name> directly controls the Gradle project name, and also indirectly sets:
+//   the project name in the IDE
+//   the Maven artifactId
+//
+def includeProject(name, filePath) {
+    settings.include(name)
+
+    def file
+    if (filePath != null) {
+        if (filePath instanceof String) {
+            file = new File(rootDir, filePath)
+        } else {
+            file = filePath
+        }
+        project(name).projectDir = file
+    } else {
+        file = project(name).projectDir
+    }
+}
+
+
+includeProject(":leanback:leanback-paging", "leanback/leanback-paging")
+includeProject(":paging:paging-runtime", "paging/runtime")
+includeBuild(new File("../doclava"))
+includeProject(":docs-fake", "docs-fake")
