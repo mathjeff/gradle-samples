@@ -1,0 +1,159 @@
+/*package androidx.leanback.paging
+
+import androidx.leanback.widget.ObjectAdapter
+import androidx.leanback.widget.Presenter
+import androidx.leanback.widget.PresenterSelector
+import androidx.lifecycle.Lifecycle
+import androidx.paging.AsyncPagingDataDiffer
+import androidx.paging.Pager
+import androidx.paging.PagingSource
+import androidx.paging.LoadState
+import androidx.paging.RemoteMediator
+import androidx.paging.LoadType
+import androidx.paging.CombinedLoadStates
+import androidx.paging.ExperimentalPagingApi
+import androidx.paging.PagingData
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListUpdateCallback
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.Flow
+
+class PagingDataAdapter<T : Any> : ObjectAdapter {
+
+    private val diffCallback: DiffUtil.ItemCallback<T>
+    private val mainDispatcher: CoroutineDispatcher
+    private val workerDispatcher: CoroutineDispatcher
+    private val differ: AsyncPagingDataDiffer<T>
+    private val listUpdateCallback: ListUpdateCallback =
+        object : ListUpdateCallback {
+            override fun onInserted(position: Int, count: Int) {
+                notifyItemRangeInserted(position, count)
+            }
+            override fun onRemoved(position: Int, count: Int) {
+                notifyItemRangeRemoved(position, count)
+            }
+            override fun onMoved(fromPosition: Int, toPosition: Int) {
+                notifyItemMoved(fromPosition, toPosition)
+            }
+            override fun onChanged(
+                position: Int,
+                count: Int,
+                payload: Any?
+            ) {
+                notifyItemRangeChanged(position, count, payload)
+            }
+        }
+
+    @JvmOverloads
+    constructor(
+        diffCallback: DiffUtil.ItemCallback<T>,
+        mainDispatcher: CoroutineDispatcher = Dispatchers.Main,
+        workerDispatcher: CoroutineDispatcher = Dispatchers.Default
+    ) : super() {
+
+        this.diffCallback = diffCallback
+        this.mainDispatcher = mainDispatcher
+        this.workerDispatcher = workerDispatcher
+        this.differ = AsyncPagingDataDiffer<T>(
+            diffCallback = diffCallback,
+            updateCallback = listUpdateCallback,
+            mainDispatcher = mainDispatcher,
+            workerDispatcher = workerDispatcher
+        )
+    }
+
+    @JvmOverloads
+    constructor(
+        presenter: Presenter,
+        diffCallback: DiffUtil.ItemCallback<T>,
+        mainDispatcher: CoroutineDispatcher = Dispatchers.Main,
+        workerDispatcher: CoroutineDispatcher = Dispatchers.Default
+    ) : super(presenter) {
+
+        this.diffCallback = diffCallback
+        this.mainDispatcher = mainDispatcher
+        this.workerDispatcher = workerDispatcher
+        this.differ = AsyncPagingDataDiffer<T>(
+            diffCallback = diffCallback,
+            updateCallback = listUpdateCallback,
+            mainDispatcher = mainDispatcher,
+            workerDispatcher = workerDispatcher
+        )
+    }
+
+    @JvmOverloads
+    constructor(
+        presenterSelector: PresenterSelector,
+        diffCallback: DiffUtil.ItemCallback<T>,
+        mainDispatcher: CoroutineDispatcher = Dispatchers.Main,
+        workerDispatcher: CoroutineDispatcher = Dispatchers.Default
+    ) : super(presenterSelector) {
+
+        this.diffCallback = diffCallback
+        this.mainDispatcher = mainDispatcher
+        this.workerDispatcher = workerDispatcher
+        this.differ = AsyncPagingDataDiffer<T>(
+            diffCallback = diffCallback,
+            updateCallback = listUpdateCallback,
+            mainDispatcher = mainDispatcher,
+            workerDispatcher = workerDispatcher
+        )
+    }
+
+    suspend fun submitData(pagingData: PagingData<T>) {
+        differ.submitData(pagingData)
+    }
+
+
+    fun submitData(lifecycle: Lifecycle, pagingData: PagingData<T>) {
+        differ.submitData(lifecycle, pagingData)
+    }
+
+
+    fun retry() {
+        differ.retry()
+    }
+
+    fun refresh() {
+        differ.refresh()
+    }
+
+
+    @OptIn(FlowPreview::class)
+    val loadStateFlow: Flow<CombinedLoadStates>
+        get() = differ.loadStateFlow
+
+
+    fun addLoadStateListener(listener: (CombinedLoadStates) -> Unit) {
+        differ.addLoadStateListener(listener)
+    }
+
+    fun removeLoadStateListener(listener: (CombinedLoadStates) -> Unit) {
+        differ.removeLoadStateListener(listener)
+    }
+
+    override fun size(): Int {
+        return differ.itemCount
+    }
+
+    override fun get(position: Int): T? {
+        return differ.getItem(position)
+    }
+
+    @ExperimentalPagingApi
+    val dataRefreshFlow: Flow<Boolean>
+        get() = differ.dataRefreshFlow
+
+    @ExperimentalPagingApi
+    fun addDataRefreshListener(listener: (isEmpty: Boolean) -> Unit) {
+        differ.addDataRefreshListener(listener)
+    }
+
+    @ExperimentalPagingApi
+    fun removeDataRefreshListener(listener: (isEmpty: Boolean) -> Unit) {
+        differ.removeDataRefreshListener(listener)
+    }
+}
+*/
