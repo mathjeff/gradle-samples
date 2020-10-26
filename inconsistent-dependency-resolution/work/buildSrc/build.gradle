@@ -6,13 +6,11 @@ buildscript {
             url "${supportRootFolder}/../prebuilts/androidx/external"
         }
     }
-    apply from: "build_dependencies.gradle"
+//    apply from: "build_dependencies.gradle"
     dependencies {
-        classpath build_libs.kotlin.gradle_plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0"
+//        classpath build_libs.kotlin.gradle_plugin
     }
-/*    configurations.classpath.resolutionStrategy {
-    }
-*/
 }
 apply from: "out.gradle"
 init.chooseOutDir()
@@ -24,22 +22,16 @@ allprojects {
     tasks.withType(KotlinCompile).configureEach {
         kotlinOptions {
             jvmTarget = "1.8"
-            freeCompilerArgs += [
-            ]
+//            freeCompilerArgs += [
+//            ]
         }
     }
 }
-/*configurations {
-    cacheableImplementation {
-    }
-    cacheableRuntime {
-    }
-}*/
 
 dependencies {
     api "com.android.tools.build:gradle:4.2.0-alpha06"
     implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0"
     implementation gradleApi()
-    compileOnly(findGradleKotlinDsl()) // Only one file in this configuration, no need to cache it
+    compileOnly(findGradleKotlinDsl())
 }
 apply plugin: "java-gradle-plugin"

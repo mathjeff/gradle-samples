@@ -1,40 +1,12 @@
 import androidx.build.SupportConfig
 import static androidx.build.dependencies.DependenciesKt.GUAVA
 
-/*buildscript {
-    project.ext['android.uniquePackageNames'] = false
-}*/
-
 plugins {
     id("AndroidXPlugin")
     id("com.android.application")
 }
 
 println("Jeff docs-fake evaluation start")
-/*def reentrance = false
-project.tasks.whenTaskAdded { task ->
-    if (task instanceof org.gradle.api.tasks.testing.Test
-            || task.name.startsWith("assemble")
-            || task.name == "lint"
-            || task.name == "transformDexArchiveWithExternalLibsDexMergerForPublicDebug"
-            || task.name == "transformResourcesWithMergeJavaResForPublicDebug"
-            || task.name == "checkPublicDebugDuplicateClasses") {
-        if (!reentrance) {
-            reentrance = true
-            project.tasks.named(task.name) {
-                actions = []
-                dependsOn = []
-            }
-            reentrance = false
-        }
-    }
-}
-
-project.tasks.named("lint") {
-    actions = []
-    dependsOn = []
-}*/
-
 android {
     buildToolsVersion "30.0.2"
     compileSdkVersion 30
@@ -53,11 +25,5 @@ android {
         checkReleaseBuilds false
     }
 }
-
-/*configurations.all {
-    resolutionStrategy {
-        force GUAVA
-    }
-}*/
 
 println("Jeff docs-fake evaluation end")

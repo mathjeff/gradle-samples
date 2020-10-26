@@ -2,7 +2,6 @@ package androidx.build
 import androidx.build.Strategy.Prebuilts
 import androidx.build.Strategy.TipOfTree
 import androidx.build.doclava.DoclavaTask
-//import androidx.build.docs.GenerateDocsTask
 import androidx.build.gradle.isRoot
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
@@ -32,7 +31,7 @@ class DiffAndDocs private constructor(
     init {
         val doclavaConfiguration = root.configurations.create("doclava")
         doclavaConfiguration.dependencies.add(root.dependencies.create(DOCLAVA_DEPENDENCY))
-        rules = additionalRules //+ TIP_OF_TREE
+        rules = additionalRules
         docsProject = root.findProject(":docs-fake")
         rules.forEach { rule ->
             val generateDocsTask = createGenerateDocsTask(
@@ -188,8 +187,6 @@ private fun registerAndroidProjectForDocsTask(
         }
         System.out.println("Jeff registered android project done getting sources #2")
     }
-    //val compileDestDir = javaCompileProvider.get().destinationDir
-    //System.out.println("Compile dest dir = " + compileDestDir)
 }
 
 private fun createGenerateDocsTask(
