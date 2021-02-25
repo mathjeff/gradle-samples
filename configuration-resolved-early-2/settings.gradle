@@ -1,0 +1,13 @@
+pluginManagement {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+rootProject.name = "androidx"
+
+include ':paging:samples'
+project(":paging:samples").projectDir = new File("paging/samples")
+
+includeBuild(new File(buildscript.sourceFile.parent, "included-build"))
