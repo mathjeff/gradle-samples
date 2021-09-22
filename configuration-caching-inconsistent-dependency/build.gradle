@@ -1,0 +1,28 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.5.21"
+    id("maven-publish")
+}
+
+repositories {
+    mavenCentral()
+}
+
+group = "sample"
+version = "1.0"
+
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "build/repo"
+        }
+    }
+}
+    
+dependencies {
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+}
