@@ -1,0 +1,5 @@
+rootProject.name = "androidx"
+
+include ":compose:foundation:foundation-lint"
+include ":compose:lint:common"
+includeBuild(new File(buildscript.sourceFile.parent, "included-build"))

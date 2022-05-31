@@ -1,0 +1,107 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotlin-logging/2.1.21/kotlin-logging-2.1.21.module",
+    "group": "io.github.microutils",
+    "module": "kotlin-logging",
+    "version": "2.1.21",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "1.7.32"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-logging-jvm-2.1.21.jar",
+          "url": "kotlin-logging-jvm-2.1.21.jar",
+          "size": 43729,
+          "sha512": "7688f2f14baf09c7a618f04cb8c2ff1c46647bc8107ab3b823369b92d74b8b0abd1a1da317e9a2ccd70b1a1ae03c64d140b64066bf604719785411718d54f752",
+          "sha256": "7b15ccb488261de2a77004f13b2d4a00c92d1bbbb2ad79efb9b6c2e56c5a7ae6",
+          "sha1": "7a65a2789a27c67c281a4fe9e78689cf5e2b36d8",
+          "md5": "20757820c220698ca9ac6c6f603ecd9b"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "1.7.32"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlin-logging-jvm-2.1.21.jar",
+          "url": "kotlin-logging-jvm-2.1.21.jar",
+          "size": 43729,
+          "sha512": "7688f2f14baf09c7a618f04cb8c2ff1c46647bc8107ab3b823369b92d74b8b0abd1a1da317e9a2ccd70b1a1ae03c64d140b64066bf604719785411718d54f752",
+          "sha256": "7b15ccb488261de2a77004f13b2d4a00c92d1bbbb2ad79efb9b6c2e56c5a7ae6",
+          "sha1": "7a65a2789a27c67c281a4fe9e78689cf5e2b36d8",
+          "md5": "20757820c220698ca9ac6c6f603ecd9b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+buildscript {
+  repositories {
+    maven {
+      url "${project.rootProject.projectDir}/repo"
+      metadataSources {
+        mavenPom()
+        artifact()
+      }
+    }
+  }
+  
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+  }
+}
+
+repositories {
+  maven {
+    url "${project.rootProject.projectDir}/repo"
+    metadataSources {
+      mavenPom()
+      artifact()
+    }
+  }
+}
+
+apply plugin: "kotlin"
+
+def bundle = configurations.create("bundleInside")
+tasks.named("jar").configure { jarTask ->
+  jarTask.dependsOn(bundle)
+  jarTask.from(bundle)
+}
+
+dependencies {
+  bundleInside(project(":compose:lint:common"))
+}
+
+def ktlintConf = configurations.create("ktlint")
+ktlintConf.dependencies.add(dependencies.create("com.pinterest:ktlint:0.46.0-SNAPSHOT"))
+
+tasks.register("ktlint", Jar) { task ->
+  task.from(ktlintConf)
+}
+
+

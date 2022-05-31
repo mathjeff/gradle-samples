@@ -1,0 +1,17 @@
+buildscript {
+  repositories {
+    maven {
+      url "${project.rootProject.projectDir}/repo"
+    }
+  }
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+  }
+}
+repositories {
+  maven {
+    url "${project.rootProject.projectDir}/repo"
+  }
+}
+
+apply plugin: "kotlin"

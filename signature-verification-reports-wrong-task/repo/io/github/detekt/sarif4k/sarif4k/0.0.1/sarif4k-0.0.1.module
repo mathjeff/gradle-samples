@@ -1,0 +1,137 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.detekt.sarif4k",
+    "module": "sarif4k",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7",
+      "buildId": "ubbuv5p7crg23e6wrplnbgvvi4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sarif4k-0.0.1.jar",
+          "url": "sarif4k-0.0.1.jar",
+          "size": 444652,
+          "sha512": "e7d4e081da5779660c7862978906e4429f2bc3342691003388b163eba239c0c3f4bd0d5aa502091bca68d3daa205961eda374eee4a1ea8eb488a9d53cbe9a710",
+          "sha256": "41ec72cf2521783224581c76aaa7e97d4a50f396a66d642500ff4777b395a376",
+          "sha1": "9083c4703896cfe82b20f085d7279bf8d5e85219",
+          "md5": "4df708ac6dd73c14610ccee0835a028d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sarif4k-0.0.1.jar",
+          "url": "sarif4k-0.0.1.jar",
+          "size": 444652,
+          "sha512": "e7d4e081da5779660c7862978906e4429f2bc3342691003388b163eba239c0c3f4bd0d5aa502091bca68d3daa205961eda374eee4a1ea8eb488a9d53cbe9a710",
+          "sha256": "41ec72cf2521783224581c76aaa7e97d4a50f396a66d642500ff4777b395a376",
+          "sha1": "9083c4703896cfe82b20f085d7279bf8d5e85219",
+          "md5": "4df708ac6dd73c14610ccee0835a028d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "sarif4k-0.0.1-javadoc.jar",
+          "url": "sarif4k-0.0.1-javadoc.jar",
+          "size": 261,
+          "sha512": "84de985ac96010bccc42b2097a7018d1b06ee1105aba329dfe1147ccde6acb29fe72b3c2ade25eb278049155c5d49ead4ca37aee78046e17a839e031034a322b",
+          "sha256": "0c7700fbfb9645fd70fb247aee5b06aeb587503558c9633482641fbbd25467e6",
+          "sha1": "a556ce588e4fe9c2a91733e570ca7ed13135c620",
+          "md5": "f04c2d66ae7878d7d68c2babaec11a15"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "sarif4k-0.0.1-sources.jar",
+          "url": "sarif4k-0.0.1-sources.jar",
+          "size": 17638,
+          "sha512": "82d23af34169c496fee08a9aa8a632b0fa4cabd3ba9cd52612387384e078292c5489075a09d5ed304f96008e37cfc846befc771e2cacb6b022c536e02b936935",
+          "sha256": "a561d0ad200a60dad9a87d0efd3125dc7fb2df860b58ca2fa9ae54e7847f8d5e",
+          "sha1": "39ce50633b0efeea2869f5db4456d4ab44f386f6",
+          "md5": "199d0261b51ab103f37e69e634d0fc4a"
+        }
+      ]
+    }
+  ]
+}

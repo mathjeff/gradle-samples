@@ -1,0 +1,4 @@
+tasks.create("buildOnServer")
+
+tasks["buildOnServer"].dependsOn(":compose:foundation:foundation-lint:jar")
+tasks["buildOnServer"].dependsOn(":compose:foundation:foundation-lint:ktlint")

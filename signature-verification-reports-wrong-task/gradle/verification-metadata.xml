@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<verification-metadata xmlns="https://schema.gradle.org/dependency-verification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://schema.gradle.org/dependency-verification https://schema.gradle.org/dependency-verification/dependency-verification-1.1.xsd">
+   <configuration>
+     <verify-metadata>true</verify-metadata>
+     <verify-signatures>true</verify-signatures>
+     <key-servers enabled="false"/>
+     <trusted-artifacts>
+       <!-- not relevant to the error that we're trying to reproduce -->
+       <trust group="org.*" regex="true"/>
+       <trust group="com.*" regex="true"/>
+       <trust group="net.*" regex="true"/>
+       <trust group="io.github.microutils" />
+       <trust group="io.github.detekt.sarif4k" />
+       <trust group="gradle.plugin.com.github.johnrengelman" />
+       <trust group="de.undercouch" />
+     </trusted-artifacts>
+     <trusted-keys>
+       <trusted-key id="475f3b8e59e6e63aa78067482c7b12f2a511e325">
+         <trusting group="ch.qos.logback"/>
+         <trusting group="org.slf4j"/>
+       </trusted-key>
+     </trusted-keys>
+   </configuration>
+</verification-metadata>
+

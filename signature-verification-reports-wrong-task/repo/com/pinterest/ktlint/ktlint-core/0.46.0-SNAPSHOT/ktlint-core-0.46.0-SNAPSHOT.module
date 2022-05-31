@@ -1,0 +1,164 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pinterest.ktlint",
+    "module": "ktlint-core",
+    "version": "0.46.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-compiler-embeddable",
+          "version": {
+            "requires": "1.6.21"
+          }
+        },
+        {
+          "group": "org.ec4j.core",
+          "module": "ec4j-core",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "io.github.microutils",
+          "module": "kotlin-logging-jvm",
+          "version": {
+            "requires": "2.1.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-core-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-core-0.46.0-SNAPSHOT.jar",
+          "size": 222858,
+          "sha512": "6a893b1393ac39d41b3267e6a70e0629658f4097f72ec7cb8de47a5ec261e8ccc7ceb0b2073a00b17cc286e9ceb38cd9709bbb4a148ac6298daa4a95bc761fb1",
+          "sha256": "980ad525d5dd39476c9ce4d452da890438c19b01115a7010583b34d6eeb5d308",
+          "sha1": "b03f5dc54ce2608ddfa68277f14f2aec3489a9e1",
+          "md5": "a3e54e114cd7f1bf0c67e665774749e1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-compiler-embeddable",
+          "version": {
+            "requires": "1.6.21"
+          }
+        },
+        {
+          "group": "org.ec4j.core",
+          "module": "ec4j-core",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "io.github.microutils",
+          "module": "kotlin-logging-jvm",
+          "version": {
+            "requires": "2.1.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-core-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-core-0.46.0-SNAPSHOT.jar",
+          "size": 222858,
+          "sha512": "6a893b1393ac39d41b3267e6a70e0629658f4097f72ec7cb8de47a5ec261e8ccc7ceb0b2073a00b17cc286e9ceb38cd9709bbb4a148ac6298daa4a95bc761fb1",
+          "sha256": "980ad525d5dd39476c9ce4d452da890438c19b01115a7010583b34d6eeb5d308",
+          "sha1": "b03f5dc54ce2608ddfa68277f14f2aec3489a9e1",
+          "md5": "a3e54e114cd7f1bf0c67e665774749e1"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-core-0.46.0-SNAPSHOT-sources.jar",
+          "url": "ktlint-core-0.46.0-SNAPSHOT-sources.jar",
+          "size": 41180,
+          "sha512": "d651ff8e90d9b98b2694db06e1e6f51e6157e04b0655e389f83fb8ecde02d42d19e9411ee5bdaa02171f87824b1aaa3ae7978f7d8de920780ec2b87ba9848688",
+          "sha256": "2473fde65cc43f270d7eb754e29beba9e81055b21775eb4617b92bc7a4a160ba",
+          "sha1": "f6c0cb5bc63e3b1cb6601f5afc975360332ecba2",
+          "md5": "4f80bbe2d24206dbd16e7e617477ca5f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-core-0.46.0-SNAPSHOT-javadoc.jar",
+          "url": "ktlint-core-0.46.0-SNAPSHOT-javadoc.jar",
+          "size": 484690,
+          "sha512": "df1de137c58eb55483a1c9d558df07f2f23187f90add967ea82bd79b2fa7064148f7b63eda12dee8e4a9ce9c4251cddc6e9977ddc02b19bdbcc0d3c726d473b9",
+          "sha256": "808784062a9165b03edebc155018ac5a93065f5fdf71507eb81167873002a6c8",
+          "sha1": "27bed4289241b32747d8767edd55f7a20e743c21",
+          "md5": "e451fc9173993815ea66487bef857922"
+        }
+      ]
+    }
+  ]
+}

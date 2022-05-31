@@ -1,0 +1,136 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pinterest.ktlint",
+    "module": "ktlint-reporter-sarif",
+    "version": "0.46.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-reporter-sarif-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-reporter-sarif-0.46.0-SNAPSHOT.jar",
+          "size": 7504,
+          "sha512": "6be6e54409feb098a3a753c0e319386004ff963cbfbfcad4aebbf2bf53852a437930820418e2954c049c59c5667da33260d6f5b46552d773a25994f95716efc4",
+          "sha256": "2bce0956a15ea5d889f606ec326aec875fcb3656712603c67aa5f3fec5e9ab8e",
+          "sha1": "482f6f466fd305d8fa3d0d605a2b8d302eebec39",
+          "md5": "4d346468cbc776971260306f9301be77"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-core",
+          "version": {
+            "requires": "0.46.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "io.github.detekt.sarif4k",
+          "module": "sarif4k",
+          "version": {
+            "requires": "0.0.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-reporter-sarif-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-reporter-sarif-0.46.0-SNAPSHOT.jar",
+          "size": 7504,
+          "sha512": "6be6e54409feb098a3a753c0e319386004ff963cbfbfcad4aebbf2bf53852a437930820418e2954c049c59c5667da33260d6f5b46552d773a25994f95716efc4",
+          "sha256": "2bce0956a15ea5d889f606ec326aec875fcb3656712603c67aa5f3fec5e9ab8e",
+          "sha1": "482f6f466fd305d8fa3d0d605a2b8d302eebec39",
+          "md5": "4d346468cbc776971260306f9301be77"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-reporter-sarif-0.46.0-SNAPSHOT-sources.jar",
+          "url": "ktlint-reporter-sarif-0.46.0-SNAPSHOT-sources.jar",
+          "size": 2852,
+          "sha512": "51eb0b0fdcd33c7ba608be909fa3c3bae90396e6a07782fe05e2c95197bb2dcf960842218f8984612534529cce5f055864f5d37f9bd09fb2767508946923e371",
+          "sha256": "3f7fdfe62ff3bb0ff0cddef4018b73be2187443abb463a7266fbda4a0bfc72cf",
+          "sha1": "dbd8f477b626a7b469a162b965faecbd12fe31eb",
+          "md5": "39b166ca789a18d835542717c9cf6e14"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-reporter-sarif-0.46.0-SNAPSHOT-javadoc.jar",
+          "url": "ktlint-reporter-sarif-0.46.0-SNAPSHOT-javadoc.jar",
+          "size": 271151,
+          "sha512": "4153c042a7ea2fd330be7fefb158f5d416ed7a9883bf5429e6354a196e6f2b12a01ea36c9e65dfc024d1559732e27a60de7a9aac995c9f63ae4d58dfb80feb72",
+          "sha256": "08f5108d9a7c8c9370fa93d90490b1fa685bb74bd39e543b0ace8fa902179104",
+          "sha1": "febb85fa02da2e1dcddb24c25216b554581b5cd1",
+          "md5": "7e45433ee5c787e773b699994d5bf9b8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (c) 2017 Angelo Zerr and other contributors as
+    indicated by the @author tags.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.ec4j.core</groupId>
+    <artifactId>ec4j-core-parent</artifactId>
+    <version>0.3.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>ec4j</name>
+    <description>An EditorConfig parser for Java</description>
+    <url>https://github.com/angelozerr/ec4j</url>
+    <inceptionYear>2017</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>angelozerr</id>
+            <name>Angelo Zerr</name>
+            <timezone>Europe/Paris</timezone>
+        </developer>
+        <developer>
+            <id>ppalaga</id>
+            <name>Peter Palaga</name>
+            <timezone>Europe/Prague</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:ec4j/ec4j.git</connection>
+        <developerConnection>scm:git:git@github.com:ec4j/ec4j.git</developerConnection>
+        <url>https://github.com/angelozerr/ec4j</url>
+      <tag>0.3.0</tag>
+  </scm>
+
+    <modules>
+        <module>core</module>
+        <module>ide-support</module>
+        <module>core-build</module>
+    </modules>
+
+    <properties>
+        <!-- Plugins and their dependencies -->
+        <version.com.mycila.license-maven-plugin>3.0</version.com.mycila.license-maven-plugin>
+        <version.formatter-maven-plugin>2.11.0</version.formatter-maven-plugin>
+        <version.impsort-maven-plugin>1.3.2</version.impsort-maven-plugin>
+        <version.maven-clean-plugin>3.1.0</version.maven-clean-plugin>
+        <version.maven-compiler-plugin>3.8.0</version.maven-compiler-plugin>
+        <version.maven-deploy-plugin>3.0.0-M1</version.maven-deploy-plugin>
+        <version.maven-enforcer-plugin>3.0.0-M2</version.maven-enforcer-plugin>
+        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+        <version.maven-install-plugin>3.0.0-M1</version.maven-install-plugin>
+        <version.maven-jar-plugin>3.1.0</version.maven-jar-plugin>
+        <version.maven-javadoc-plugin>3.0.1</version.maven-javadoc-plugin>
+        <version.maven-plugin-plugin>3.5.2</version.maven-plugin-plugin>
+        <version.maven-release-plugin>2.5.3</version.maven-release-plugin>
+        <version.maven-resources-plugin>3.1.0</version.maven-resources-plugin>
+        <version.maven-scm-plugin>1.11.1</version.maven-scm-plugin>
+        <version.maven-site-plugin>3.7.1</version.maven-site-plugin>
+        <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
+        <version.maven-surefire-plugin>3.0.0-M1</version.maven-surefire-plugin>
+        <version.nexus-staging-maven-plugin>1.6.8</version.nexus-staging-maven-plugin>
+        <version.org.apache.felix.maven-bundle-plugin>4.1.0</version.org.apache.felix.maven-bundle-plugin>
+        <version.org.codehaus.mojo.build-helper-maven-plugin>3.0.0</version.org.codehaus.mojo.build-helper-maven-plugin>
+        <version.org.codehaus.buildnumber-maven-plugin>1.4</version.org.codehaus.buildnumber-maven-plugin>
+        <version.org.codehaus.gmaven.groovy-maven-plugin>2.1</version.org.codehaus.gmaven.groovy-maven-plugin>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- -Xdoclint:none disables javadoc validation -->
+        <javadoc.doclint>-Xdoclint:none</javadoc.doclint>
+
+        <!-- license-maven-plugin -->
+        <license.failIfMissing>true</license.failIfMissing>
+        <license.failIfUnknown>true</license.failIfUnknown>
+
+        <!-- maven-surefire-plugin -->
+        <surefire.useFile>false</surefire.useFile>
+        <trimStackTrace>false</trimStackTrace>
+
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
+
+        <!-- nexus-staging-maven-plugin -->
+        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+
+        <!-- Repository Deployment URLs -->
+        <oss.nexus.base.url>https://oss.sonatype.org</oss.nexus.base.url>
+        <releases.repo.url>${oss.nexus.base.url}/service/local/staging/deploy/maven2/</releases.repo.url>
+        <snapshots.repo.url>${oss.nexus.base.url}/content/repositories/snapshots/</snapshots.repo.url>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Ordering: alphabetical by groupId and artifactId -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ec4j.core</groupId>
+                <artifactId>ec4j-core</artifactId>
+                <version>0.3.0</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Ordering: alphabetical by groupId and artifactId -->
+
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${version.com.mycila.license-maven-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>net.revelc.code.formatter</groupId>
+                    <artifactId>formatter-maven-plugin</artifactId>
+                    <version>${version.formatter-maven-plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.revelc.code</groupId>
+                    <artifactId>impsort-maven-plugin</artifactId>
+                    <version>${version.impsort-maven-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>${version.org.apache.felix.maven-bundle-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${version.maven-clean-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${version.maven-compiler-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${version.maven-deploy-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${version.maven-enforcer-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${version.maven-gpg-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${version.maven-install-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${version.maven-jar-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${version.maven-javadoc-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${version.maven-release-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${version.maven-resources-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>${version.maven-scm-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>${version.maven-site-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${version.maven-source-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.maven-surefire-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>${version.org.codehaus.buildnumber-maven-plugin}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>${version.nexus-staging-maven-plugin}</version>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!-- Ordering: alphabetical by groupId and artifactId -->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <configuration>
+                    <inlineHeader>Copyright (c) ${project.inceptionYear} Angelo Zerr and other contributors as
+indicated by the @author tags.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</inlineHeader>
+                    <excludes>
+                        <exclude>**/*.adoc</exclude>
+                        <exclude>**/*.importorder</exclude>
+                        <exclude>**/README.*</exclude>
+                        <exclude>.gitattributes/</exclude>
+                        <exclude>**/.gitkeep</exclude>
+                        <exclude>.mvn/wrapper/</exclude>
+                        <exclude>CMakeFiles/</exclude>
+                        <exclude>CMakeCache.txt</exclude>
+                        <exclude>CMakeLists.txt</exclude>
+                        <exclude>CTestTestfile.cmake</exclude>
+                        <exclude>cmake_install.cmake</exclude>
+                        <exclude>editorconfig-core-test/</exclude>
+                        <exclude>LICENSE</exclude>
+                        <exclude>Makefile</exclude>
+                        <exclude>mvnw</exclude>
+                        <exclude>mvnw.cmd</exclude>
+                        <exclude>src/test/resources/bom/*</exclude>
+                        <exclude>Testing/</exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>net.revelc.code.formatter</groupId>
+                <artifactId>formatter-maven-plugin</artifactId>
+                <configuration>
+                    <configFile>${maven.multiModuleProjectDirectory}/core-build/src/main/resources/eclipse-format.xml</configFile>
+                    <skip>${format.skip}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>format-java</id>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>net.revelc.code</groupId>
+                <artifactId>impsort-maven-plugin</artifactId>
+                <configuration>
+                    <groups>java.,javax.</groups>
+                    <skip>${format.skip}</skip>
+                    <removeUnused>true</removeUnused>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sort-imports</id>
+                        <goals>
+                            <goal>sort</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>bundle-manifest</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>manifest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${osgi.bundle.symbolic.name}</Bundle-SymbolicName><!-- needs to be defined per module -->
+                        <Built-From-Git-SHA1>${buildNumber}</Built-From-Git-SHA1>
+                        <Built-On>${timestamp}</Built-On>
+                        <Built-From-Git-Branch>${scmBranch}</Built-From-Git-Branch>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-versions</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>1.8</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                    <version>3.5.4</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <preparationGoals>package</preparationGoals>
+                    <goals>deploy</goals>
+                    <releaseProfiles>release</releaseProfiles>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <nexusUrl>${oss.nexus.base.url}</nexusUrl>
+                    <!-- The server "id" element from settings.xml to use authentication from -->
+                    <serverId>ossrh</serverId>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <configuration>
+                    <locale>en_US</locale>
+                    <timestampFormat>{0,date,yyyy-MM-dd'T'HH:mm:ssX}</timestampFormat>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <profiles>
+        <!-- core-test profile to produce a jar file with a version-less name as it is expected by cmake tests -->
+        <profile>
+            <id>core-test</id>
+            <build>
+                <finalName>${project.artifactId}</finalName>
+            </build>
+        </profile>
+
+        <profile>
+            <id>release</id>
+
+            <properties>
+                <!-- This makes the buildnumber-maven-plugin fail in case of uncommitted local changes -->
+                <maven.buildNumber.doCheck>true</maven.buildNumber.doCheck>
+            </properties>
+
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <configuration>
+                            <additionalparam>${javadoc.doclint}</additionalparam>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+        </profile>
+    </profiles>
+</project>

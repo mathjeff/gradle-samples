@@ -1,0 +1,129 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pinterest.ktlint",
+    "module": "ktlint-reporter-baseline",
+    "version": "0.46.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-reporter-baseline-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-reporter-baseline-0.46.0-SNAPSHOT.jar",
+          "size": 7115,
+          "sha512": "4a771ae799a1268491ac6389a6994a8567894512e2bc6274df06c16708b392a136978124525e35495b99e9bc67393d86b1ccf5a7b78356fc52fbf3e10d440dc4",
+          "sha256": "f1135a3b8d06d0ec7040a24d2625fa6f37571354de12834c893bc1749f06db1d",
+          "sha1": "a566746f95865b9da878e37560176e642f585a91",
+          "md5": "8407c72f4a047bf1de35adf56cc684ec"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-core",
+          "version": {
+            "requires": "0.46.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.0-RC"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-reporter-baseline-0.46.0-SNAPSHOT.jar",
+          "url": "ktlint-reporter-baseline-0.46.0-SNAPSHOT.jar",
+          "size": 7115,
+          "sha512": "4a771ae799a1268491ac6389a6994a8567894512e2bc6274df06c16708b392a136978124525e35495b99e9bc67393d86b1ccf5a7b78356fc52fbf3e10d440dc4",
+          "sha256": "f1135a3b8d06d0ec7040a24d2625fa6f37571354de12834c893bc1749f06db1d",
+          "sha1": "a566746f95865b9da878e37560176e642f585a91",
+          "md5": "8407c72f4a047bf1de35adf56cc684ec"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-reporter-baseline-0.46.0-SNAPSHOT-sources.jar",
+          "url": "ktlint-reporter-baseline-0.46.0-SNAPSHOT-sources.jar",
+          "size": 2503,
+          "sha512": "96e9e65c1fcb496d4a72b545405742abf7d4531eb0a3f6038f964304798f544b78a7ca63fbec0fcb59e9e2f4d74ec240b08e5a7baa7a7a3ad42845fc603b6521",
+          "sha256": "efe3d9be8152f877d070e769f786a11eece802b50aeff5da0d7991d1bdd5f3ac",
+          "sha1": "32ac7615eaadb599f715b70b97bcbfe40cd38852",
+          "md5": "933fdcfb030ffa01262b61b4e59f31e7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-reporter-baseline-0.46.0-SNAPSHOT-javadoc.jar",
+          "url": "ktlint-reporter-baseline-0.46.0-SNAPSHOT-javadoc.jar",
+          "size": 269625,
+          "sha512": "a4915d87c4b26a4f6c3e479892a3325c3c97a8ff4a70f9e53bb76d7307827a53351252bb892fff6a6793c8f017013002d95ed9c4500382a9d6ad18c7cefd2d42",
+          "sha256": "e9b66be14805be18d231d35d35cd2a67bb8f93ec02bbb08799a40aeaf5776779",
+          "sha1": "54e477221308ee076698e8468534b79995ff0b5c",
+          "md5": "7391474a75f9b0d13f10726811b58953"
+        }
+      ]
+    }
+  ]
+}
