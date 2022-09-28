@@ -1,0 +1,14 @@
+apply plugin: "java"
+
+if (project.hasProperty("ignoreTestFailures")) {
+  tasks["test"].ignoreFailures = true
+}
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation "junit:junit:4.12"
+}
+
