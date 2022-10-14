@@ -24,7 +24,7 @@ repositories {
   }
 }
 
-apply plugin: "kotlin"
+apply plugin: "java"
 
 def bundle = configurations.create("bundleInside")
 tasks.named("jar").configure { jarTask ->
