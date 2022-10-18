@@ -11,7 +11,7 @@ When I run `./gradlew --no-daemon buildOnServer` I get output containing:
 
 When I run `:compose:foundation:foundation-lint:jar`, I find that the build passes
 
-When I run `./gradlew --no-daemon buildOnServer` I get output containing:
+When I run `./gradlew --no-daemon ktlint` I get output containing:
 
 ```
   * What went wrong:
