@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-compiler",
+    "version": "2.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7",
+      "buildId:": "7201951"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "lifecycle-compiler-2.3.1.jar",
+          "url": "lifecycle-compiler-2.3.1.jar",
+          "size": 51151,
+          "sha512": "b06ef934dd57e1c8d052657ca14cc3427994a87a4b4d1c7f5ced72b56019c07a68b219014805135d5df1c362223c3c1a6f351c88aeab3929753dd11823d3a6ca",
+          "sha256": "6f301f503733b5fd408fe6f65d44bddbccb6fa5d1cde107904f5c0c5426b6701",
+          "sha1": "2f1790dd43cfc163ce93ecdb105ed9a294cdebab",
+          "md5": "191a08f5fc8427645780252269d7d9ce"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.20"
+          }
+        },
+        {
+          "group": "com.google.auto",
+          "module": "auto-common",
+          "version": {
+            "requires": "0.10"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "javapoet",
+          "version": {
+            "requires": "1.13.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-compiler-2.3.1.jar",
+          "url": "lifecycle-compiler-2.3.1.jar",
+          "size": 51151,
+          "sha512": "b06ef934dd57e1c8d052657ca14cc3427994a87a4b4d1c7f5ced72b56019c07a68b219014805135d5df1c362223c3c1a6f351c88aeab3929753dd11823d3a6ca",
+          "sha256": "6f301f503733b5fd408fe6f65d44bddbccb6fa5d1cde107904f5c0c5426b6701",
+          "sha1": "2f1790dd43cfc163ce93ecdb105ed9a294cdebab",
+          "md5": "191a08f5fc8427645780252269d7d9ce"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-compiler-2.3.1-sources.jar",
+          "url": "lifecycle-compiler-2.3.1-sources.jar",
+          "size": 18945,
+          "sha512": "b98b5c854261d05e0a835e6b22e64d4335c47955d6813c565b2c241227e35594f9ffb95d8f108c33863f02fda6004cfa46ffb9d1df2d749a4edac60a50f82bd5",
+          "sha256": "6f5dbfbca2596359127a69e76041db82244e364771e7e41bd28d1ef9d6fdcbdd",
+          "sha1": "d677635574a41614848015dd8be201db36321879",
+          "md5": "838e6095ded0e64250795dfcd49368df"
+        }
+      ]
+    }
+  ]
+}

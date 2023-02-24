@@ -1,0 +1,196 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-viewmodel-savedstate",
+    "version": "2.6.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0-rc-2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-core",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-savedstate-2.6.0-beta01.aar",
+          "url": "lifecycle-viewmodel-savedstate-2.6.0-beta01.aar",
+          "size": 39577,
+          "sha512": "f1f8e5cbe288892b7b3a406be400e3abbb0975ff86b1b15f41a923b1ebd9274c95bd7ab9ff52f036610467bdd469738f7da2620d7fac1253119e20269b6748e9",
+          "sha256": "daad44246a0fa1e89c3c6570a7eb33d39eb2300ab6a8e227f4e3920c5da81d24",
+          "sha1": "89ff442c358711171505f163492277e98e23d9f2",
+          "md5": "c9ee0a8161f0458c67675d4fe171dc5e"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-core",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-core",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel",
+          "version": {
+            "requires": "2.6.0-beta01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-savedstate-2.6.0-beta01.aar",
+          "url": "lifecycle-viewmodel-savedstate-2.6.0-beta01.aar",
+          "size": 39577,
+          "sha512": "f1f8e5cbe288892b7b3a406be400e3abbb0975ff86b1b15f41a923b1ebd9274c95bd7ab9ff52f036610467bdd469738f7da2620d7fac1253119e20269b6748e9",
+          "sha256": "daad44246a0fa1e89c3c6570a7eb33d39eb2300ab6a8e227f4e3920c5da81d24",
+          "sha1": "89ff442c358711171505f163492277e98e23d9f2",
+          "md5": "c9ee0a8161f0458c67675d4fe171dc5e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-savedstate-2.6.0-beta01-sources.jar",
+          "url": "lifecycle-viewmodel-savedstate-2.6.0-beta01-sources.jar",
+          "size": 15704,
+          "sha512": "e2ba4aed991d3e67184876b2853c768d8e68486a47628d0e31e89d287b36bf585c6e82255f11cb534018cf3066bb2417e6a716c0d60870306332c755a52e58e5",
+          "sha256": "3d6849e0ae21524fee6fdf4c48bd577451734ed2dbfa354b43ae0cfed20b3f2a",
+          "sha1": "25b778ef25c3f95955b1cc1d67ca891d85a11f77",
+          "md5": "62afa36a6e35e4a5069fe38dd9d4f6a4"
+        }
+      ]
+    }
+  ]
+}

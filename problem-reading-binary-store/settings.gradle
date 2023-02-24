@@ -1,0 +1,12 @@
+pluginManagement {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+rootProject.name = "androidx"
+
+include ':compose:material3:material3'
+include ':compose:foundation:foundation'
+include ':compose:ui:ui'

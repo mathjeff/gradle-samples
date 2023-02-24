@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime",
+    "version": "2.3.0-alpha07",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId:": "6759487"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.3.0-alpha07"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-alpha07.aar",
+          "url": "lifecycle-runtime-2.3.0-alpha07.aar",
+          "size": 11229,
+          "sha512": "e4d814bc866c2ee915449a88af2f26414cf7bb8edce28acbf70e8d6e1f452763c6be9092d235dff820e5a9110a2e155a3a3a92534445b3483a0dac02cfe2b422",
+          "sha256": "aca47cfa454b94661e5256fa5729de71119640bc9839fb6b8ce394f80e2b4cfa",
+          "sha1": "75c1176cdcae1eb225e6142818c5f8f9e591a0fa",
+          "md5": "2c9879825d416dae28b478b17cf07658"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.arch.core",
+          "module": "core-runtime",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.3.0-alpha07"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-alpha07.aar",
+          "url": "lifecycle-runtime-2.3.0-alpha07.aar",
+          "size": 11229,
+          "sha512": "e4d814bc866c2ee915449a88af2f26414cf7bb8edce28acbf70e8d6e1f452763c6be9092d235dff820e5a9110a2e155a3a3a92534445b3483a0dac02cfe2b422",
+          "sha256": "aca47cfa454b94661e5256fa5729de71119640bc9839fb6b8ce394f80e2b4cfa",
+          "sha1": "75c1176cdcae1eb225e6142818c5f8f9e591a0fa",
+          "md5": "2c9879825d416dae28b478b17cf07658"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-alpha07-sources.jar",
+          "url": "lifecycle-runtime-2.3.0-alpha07-sources.jar",
+          "size": 8929,
+          "sha512": "1b9f2e8ae941d37d1ee953fa7b4d75b89f8d85f5424acb696b9e9063adffc7f4a8d7e1233efeefe65be4f99c62900c50f92ef0ed0186f608b776edeaaaec9099",
+          "sha256": "d45c7777c4525cf5556299bfa6972aa680b01528b7d72a8d58685f23638cfd10",
+          "sha1": "4a0db8c2f295015c179a207de65b3dd06862a00f",
+          "md5": "d74c833594b74e708a96d2ceee16001e"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.activity",
+    "module": "activity",
+    "version": "1.3.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-savedstate",
+          "version": {
+            "requires": "2.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "activity-1.3.0-beta01.aar",
+          "url": "activity-1.3.0-beta01.aar",
+          "size": 69721,
+          "sha512": "9e15dc07f73e2d7e94859948edda56ab066629b3ebbf2bc4de94b8717c6c4abb09313ad1de89415470aebf65a8083cca80eac0970610113a5965973a9f4825ee",
+          "sha256": "93d7f0fbc7ddc489f319d28e584cb8af24fb29f35c5df57ee99d3174aca315d4",
+          "sha1": "69a6d030261b0e65b0edb39328ce97d5738ea7fa",
+          "md5": "7bc841f1318405f1553dac8a0fd46635"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-savedstate",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "androidx.collection",
+          "module": "collection",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "androidx.tracing",
+          "module": "tracing",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "activity-1.3.0-beta01.aar",
+          "url": "activity-1.3.0-beta01.aar",
+          "size": 69721,
+          "sha512": "9e15dc07f73e2d7e94859948edda56ab066629b3ebbf2bc4de94b8717c6c4abb09313ad1de89415470aebf65a8083cca80eac0970610113a5965973a9f4825ee",
+          "sha256": "93d7f0fbc7ddc489f319d28e584cb8af24fb29f35c5df57ee99d3174aca315d4",
+          "sha1": "69a6d030261b0e65b0edb39328ce97d5738ea7fa",
+          "md5": "7bc841f1318405f1553dac8a0fd46635"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "activity-1.3.0-beta01-sources.jar",
+          "url": "activity-1.3.0-beta01-sources.jar",
+          "size": 35864,
+          "sha512": "9894e3b290eb4d521df8860a7ccb6fc6aaa68d7120173487867df621ee7a3c4ea48203621791e91f47fdd5c2b5f1c135c1633a0136fbd53bc3db2c3b96fe2670",
+          "sha256": "e7ab45663cbd2727e9f5fefda4ff857c0742639597edeafc826412b41a2f8da0",
+          "sha1": "fd2a77bacd72443b40a79855dd7b5bd78b7ef4c3",
+          "md5": "e903b4be8d7256d92b6f91c9ea480ea4"
+        }
+      ]
+    }
+  ]
+}

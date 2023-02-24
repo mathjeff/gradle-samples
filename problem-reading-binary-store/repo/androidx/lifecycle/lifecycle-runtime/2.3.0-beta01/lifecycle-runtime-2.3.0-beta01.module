@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime",
+    "version": "2.3.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId:": "6860046"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.3.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-beta01.aar",
+          "url": "lifecycle-runtime-2.3.0-beta01.aar",
+          "size": 11227,
+          "sha512": "13d69e3e13fafafb5db89808a035e5ce0ca7ca306e58d44e16cff023088a36e80eda678f141ea441e774de1413f3ec86ff3a10cdcbf98fd046657cafeb423a75",
+          "sha256": "6915ed50990641277105558cc0a6d141ea72e372426ac90ff0408c0d7f19ff0d",
+          "sha1": "b5137c57f62eb28b1a221bc43c2673d630836665",
+          "md5": "774049dc19306bc5cf69102ad4590be0"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.arch.core",
+          "module": "core-runtime",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.3.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-beta01.aar",
+          "url": "lifecycle-runtime-2.3.0-beta01.aar",
+          "size": 11227,
+          "sha512": "13d69e3e13fafafb5db89808a035e5ce0ca7ca306e58d44e16cff023088a36e80eda678f141ea441e774de1413f3ec86ff3a10cdcbf98fd046657cafeb423a75",
+          "sha256": "6915ed50990641277105558cc0a6d141ea72e372426ac90ff0408c0d7f19ff0d",
+          "sha1": "b5137c57f62eb28b1a221bc43c2673d630836665",
+          "md5": "774049dc19306bc5cf69102ad4590be0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.3.0-beta01-sources.jar",
+          "url": "lifecycle-runtime-2.3.0-beta01-sources.jar",
+          "size": 8929,
+          "sha512": "1b9f2e8ae941d37d1ee953fa7b4d75b89f8d85f5424acb696b9e9063adffc7f4a8d7e1233efeefe65be4f99c62900c50f92ef0ed0186f608b776edeaaaec9099",
+          "sha256": "d45c7777c4525cf5556299bfa6972aa680b01528b7d72a8d58685f23638cfd10",
+          "sha1": "4a0db8c2f295015c179a207de65b3dd06862a00f",
+          "md5": "d74c833594b74e708a96d2ceee16001e"
+        }
+      ]
+    }
+  ]
+}

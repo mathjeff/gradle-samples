@@ -1,0 +1,125 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime-testing",
+    "version": "2.3.0-alpha07",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId:": "6759487"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.3.0-alpha07"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.3.71"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.3.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-testing-2.3.0-alpha07.aar",
+          "url": "lifecycle-runtime-testing-2.3.0-alpha07.aar",
+          "size": 7912,
+          "sha512": "3736b6517469319f9ccd3c21b5ceaf397bd5bbec1efcbe3738dd4a85d3c8fb1279d3188768e03d2082777967134339f6c2e81355b0013866396f24e4595d22cd",
+          "sha256": "31a36140246d694871195e2f837c937f319d3e9a088e64a7ad4dde39fe59e7af",
+          "sha1": "091364cc57a258ef8f1ca0ab6f453b7a33f560d3",
+          "md5": "ff99046d42c46aca1645fcd5944df16e"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.3.0-alpha07"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.3.71"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.3.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-testing-2.3.0-alpha07.aar",
+          "url": "lifecycle-runtime-testing-2.3.0-alpha07.aar",
+          "size": 7912,
+          "sha512": "3736b6517469319f9ccd3c21b5ceaf397bd5bbec1efcbe3738dd4a85d3c8fb1279d3188768e03d2082777967134339f6c2e81355b0013866396f24e4595d22cd",
+          "sha256": "31a36140246d694871195e2f837c937f319d3e9a088e64a7ad4dde39fe59e7af",
+          "sha1": "091364cc57a258ef8f1ca0ab6f453b7a33f560d3",
+          "md5": "ff99046d42c46aca1645fcd5944df16e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-testing-2.3.0-alpha07-sources.jar",
+          "url": "lifecycle-runtime-testing-2.3.0-alpha07-sources.jar",
+          "size": 1871,
+          "sha512": "58b7db22f4599d5e63594c84f3516bdfd338f18096a974249051b7a963c02c81cc261a816de3ff518aebf44201d0f53c37f18d9be61f36d2e930e3944073c962",
+          "sha256": "303f991d8d2f7738839b86285f00799a92def6b3bcd399d17259367a33688a52",
+          "sha1": "78ad0ddca28690a97453a318ccd728b9ff5f9bd9",
+          "md5": "d99f230f54afc3e27c04556989d554fc"
+        }
+      ]
+    }
+  ]
+}

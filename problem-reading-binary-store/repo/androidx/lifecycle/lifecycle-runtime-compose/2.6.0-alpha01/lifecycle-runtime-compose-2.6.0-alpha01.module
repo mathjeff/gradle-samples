@@ -1,0 +1,145 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime-compose",
+    "version": "2.6.0-alpha01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5-rc-2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation-experimental",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.6.0-alpha01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-compose-2.6.0-alpha01.aar",
+          "url": "lifecycle-runtime-compose-2.6.0-alpha01.aar",
+          "size": 12678,
+          "sha512": "9900ec44456081ffcff73c6d945791ca7a67a97021bb814703da53d99a89ae32bb2859b039a0adbb2dfad1b734df7e48b42a182e03e2a9d671735908374113e2",
+          "sha256": "1fe8f3901aa0d970b85bd2150c77695d2fab18b357c269b8f33b8b145ae625bf",
+          "sha1": "09a31651f4bab638cd25e8886b063b499a4998db",
+          "md5": "e2c83120496764a94899f9552a2faac4"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation-experimental",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.6.0-alpha01"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.7.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-compose-2.6.0-alpha01.aar",
+          "url": "lifecycle-runtime-compose-2.6.0-alpha01.aar",
+          "size": 12678,
+          "sha512": "9900ec44456081ffcff73c6d945791ca7a67a97021bb814703da53d99a89ae32bb2859b039a0adbb2dfad1b734df7e48b42a182e03e2a9d671735908374113e2",
+          "sha256": "1fe8f3901aa0d970b85bd2150c77695d2fab18b357c269b8f33b8b145ae625bf",
+          "sha1": "09a31651f4bab638cd25e8886b063b499a4998db",
+          "md5": "e2c83120496764a94899f9552a2faac4"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-compose-2.6.0-alpha01-sources.jar",
+          "url": "lifecycle-runtime-compose-2.6.0-alpha01-sources.jar",
+          "size": 2893,
+          "sha512": "480014d95a8c3eb4b4e2dd19dd26151bd35b54afff2966572ee13ece336362985cb48739fe1e6f32c805d2bdb82214b88eb24111431f65681370cce289be24e7",
+          "sha256": "fbab6be35ba514d7d4ffe06a93744aab184633c481a889cde1a8003bfd1480d8",
+          "sha1": "06fb45fc1344c9377520820d8879e9dab0a60e1d",
+          "md5": "87f6f0cb4545c27d5cfaa045db75f169"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.activity",
+    "module": "activity-ktx",
+    "version": "1.2.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5.1",
+      "buildId:": "6860046"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.activity",
+          "module": "activity",
+          "version": {
+            "requires": "1.2.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.1.0"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.3.0-beta01"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-ktx",
+          "version": {
+            "requires": "2.3.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate-ktx",
+          "version": {
+            "requires": "1.1.0-beta01"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "activity-ktx-1.2.0-beta01.aar",
+          "url": "activity-ktx-1.2.0-beta01.aar",
+          "size": 19798,
+          "sha512": "c11a788671fcc4e30e9394785307eed37b60cee0b9cc75bccec0c470f89d57f16a99f85a500c68bc8e2b215d35a350b12e0c7b7fa11fc8e55890a653d966c5d2",
+          "sha256": "9ac5ffa504fafe22b0961dd07f072cdf8339d036497ac38c956b624bb67f6bf0",
+          "sha1": "4e9af4caef29f25fbc1e49c503a030ecf6772b3f",
+          "md5": "8d7a2eef85f92b27c20f08bf45f15e31"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.activity",
+          "module": "activity",
+          "version": {
+            "requires": "1.2.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.1.0"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime-ktx",
+          "version": {
+            "requires": "2.3.0-beta01"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-ktx",
+          "version": {
+            "requires": "2.3.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.savedstate",
+          "module": "savedstate-ktx",
+          "version": {
+            "requires": "1.1.0-beta01"
+          },
+          "reason": "Mirror activity dependency graph for -ktx artifacts"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "activity-ktx-1.2.0-beta01.aar",
+          "url": "activity-ktx-1.2.0-beta01.aar",
+          "size": 19798,
+          "sha512": "c11a788671fcc4e30e9394785307eed37b60cee0b9cc75bccec0c470f89d57f16a99f85a500c68bc8e2b215d35a350b12e0c7b7fa11fc8e55890a653d966c5d2",
+          "sha256": "9ac5ffa504fafe22b0961dd07f072cdf8339d036497ac38c956b624bb67f6bf0",
+          "sha1": "4e9af4caef29f25fbc1e49c503a030ecf6772b3f",
+          "md5": "8d7a2eef85f92b27c20f08bf45f15e31"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "activity-ktx-1.2.0-beta01-sources.jar",
+          "url": "activity-ktx-1.2.0-beta01-sources.jar",
+          "size": 6077,
+          "sha512": "f54989f1aebf986a9e5bd8a128c04e2e4e2a2429d93fe24dddb8e1d86cf1738aad1067780c4d0125e70a8e80dd4233ece21e6d382d225447fe7b6a2c22fca60d",
+          "sha256": "a3929f04f27931c0b72de048d7991f076af33cdfd71f21ba4c164fc18490b86a",
+          "sha1": "8a296a81afe4b9766244c036ff5c667bbfe71bd3",
+          "md5": "911ac9addf28d7fdca0ad2131fbb30d3"
+        }
+      ]
+    }
+  ]
+}

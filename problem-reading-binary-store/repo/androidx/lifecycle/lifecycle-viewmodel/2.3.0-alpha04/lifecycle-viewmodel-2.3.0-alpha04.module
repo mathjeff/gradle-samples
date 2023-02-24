@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-viewmodel",
+    "version": "2.3.0-alpha04",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.4",
+      "buildId:": "6558100"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.3.0-alpha04.aar",
+          "url": "lifecycle-viewmodel-2.3.0-alpha04.aar",
+          "size": 10911,
+          "sha512": "7dc8264881b00fb040d980e83d95d5109e143706562ab2ba40a014960d24258aafe891d15d5d46a50d16ac52936ec65825d85cd83c0d63dbe10b76dc6804076c",
+          "sha256": "a566315dd51ef2d4fbc1ba50455a52cacd02195939031166df848d23741b5c0e",
+          "sha1": "44c7837192c200d16851ea82380a339e18b39699",
+          "md5": "e19a21aa3eafe3bbf84f160a05aeaeef"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.3.0-alpha04.aar",
+          "url": "lifecycle-viewmodel-2.3.0-alpha04.aar",
+          "size": 10911,
+          "sha512": "7dc8264881b00fb040d980e83d95d5109e143706562ab2ba40a014960d24258aafe891d15d5d46a50d16ac52936ec65825d85cd83c0d63dbe10b76dc6804076c",
+          "sha256": "a566315dd51ef2d4fbc1ba50455a52cacd02195939031166df848d23741b5c0e",
+          "sha1": "44c7837192c200d16851ea82380a339e18b39699",
+          "md5": "e19a21aa3eafe3bbf84f160a05aeaeef"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-2.3.0-alpha04-sources.jar",
+          "url": "lifecycle-viewmodel-2.3.0-alpha04-sources.jar",
+          "size": 11020,
+          "sha512": "4b3ecca656c4a23c226a5e3863fdfc5585cf994f5edacba435dfa6a022a807b286e49ba02857597179330a139ed9b7187c0d5ca948f16761c5383f1d4a529d14",
+          "sha256": "e2ac9725b56907c94c0ef108b37e6b01c1ec086bbf1fff02370de34b47763e5f",
+          "sha1": "a101ce278df2aa797691fe731b60f6cf70e10148",
+          "md5": "39f7ab9587a56bea1025184f6d63647a"
+        }
+      ]
+    }
+  ]
+}

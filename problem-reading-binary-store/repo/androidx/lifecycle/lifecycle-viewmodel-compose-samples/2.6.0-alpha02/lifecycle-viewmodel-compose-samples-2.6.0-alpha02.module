@@ -1,0 +1,108 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-viewmodel-compose-samples",
+    "version": "2.6.0-alpha02",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02.aar",
+          "url": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02.aar",
+          "size": 41038,
+          "sha512": "cad51c36b9d609313752ea98122ef1b281ae9fc03fcac1c91a95f205eae68c373d744e9963741f4778f0ac3e4808bc6cbebea02ceacacf12c4cda2707cecd14f",
+          "sha256": "43f8074b437b4c8ba33089352f9773fb94c97ef2cf09e8eaabde6c80fc03e839",
+          "sha1": "ec590f700ecc72580b4972741d99edef4edaacd4",
+          "md5": "3fc91bc2b3242b9f957b96dcdbca4209"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common-java8",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-compose",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-viewmodel-savedstate",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02.aar",
+          "url": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02.aar",
+          "size": 41038,
+          "sha512": "cad51c36b9d609313752ea98122ef1b281ae9fc03fcac1c91a95f205eae68c373d744e9963741f4778f0ac3e4808bc6cbebea02ceacacf12c4cda2707cecd14f",
+          "sha256": "43f8074b437b4c8ba33089352f9773fb94c97ef2cf09e8eaabde6c80fc03e839",
+          "sha1": "ec590f700ecc72580b4972741d99edef4edaacd4",
+          "md5": "3fc91bc2b3242b9f957b96dcdbca4209"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02-sources.jar",
+          "url": "lifecycle-viewmodel-compose-samples-2.6.0-alpha02-sources.jar",
+          "size": 3379,
+          "sha512": "71bc321f7f42099ae8f1e6d341f23b8dcd483ea400203cf5ef629c37b0a2f2f704a334d01d7504f067b911fda251851491a2dd21360e275589d92475428a8ab3",
+          "sha256": "448ea500e9b2e4b813f1930f06e0de094c5b9fd3e97a6aa97a9cea6119258058",
+          "sha1": "a2098e51c34b521e091cdccaa6e3ba228ebc783a",
+          "md5": "01b23ed76ba1fcd2795bea5847ddd553"
+        }
+      ]
+    }
+  ]
+}

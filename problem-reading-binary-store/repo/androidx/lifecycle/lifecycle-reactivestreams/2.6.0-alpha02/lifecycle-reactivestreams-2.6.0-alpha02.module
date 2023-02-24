@@ -1,0 +1,175 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-reactivestreams",
+    "version": "2.6.0-alpha02",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "org.reactivestreams",
+          "module": "reactive-streams",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-2.6.0-alpha02.aar",
+          "url": "lifecycle-reactivestreams-2.6.0-alpha02.aar",
+          "size": 9677,
+          "sha512": "267302a74c199b817efc1ee98868b92e7cbff4b218899cd78e0cf00562cc2aa625a229787eaaabfada3a2d99aa0a667246b5c4193e689191215c11c7a9502f81",
+          "sha256": "024f8f076a28b443ceab6c7af14f8b6c1f04e6ceab53bf3b386d448b30ed5de7",
+          "sha1": "ab22cf2de74a0c7fec04db4781841425fa634a3c",
+          "md5": "21a547c720d19c7704f9b5432fee2a86"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        },
+        {
+          "group": "org.reactivestreams",
+          "module": "reactive-streams",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-reactivestreams-ktx",
+          "version": {
+            "requires": "2.6.0-alpha02"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-2.6.0-alpha02.aar",
+          "url": "lifecycle-reactivestreams-2.6.0-alpha02.aar",
+          "size": 9677,
+          "sha512": "267302a74c199b817efc1ee98868b92e7cbff4b218899cd78e0cf00562cc2aa625a229787eaaabfada3a2d99aa0a667246b5c4193e689191215c11c7a9502f81",
+          "sha256": "024f8f076a28b443ceab6c7af14f8b6c1f04e6ceab53bf3b386d448b30ed5de7",
+          "sha1": "ab22cf2de74a0c7fec04db4781841425fa634a3c",
+          "md5": "21a547c720d19c7704f9b5432fee2a86"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-2.6.0-alpha02-sources.jar",
+          "url": "lifecycle-reactivestreams-2.6.0-alpha02-sources.jar",
+          "size": 3277,
+          "sha512": "01c3ab1af44a95221598684c71df1732331de6617250a427cb4e5f8943e6117b49d1fb0fdadc4c671360a5d3d5209d167bac23af409d4a670d371720de2ce099",
+          "sha256": "66f08622314aad1e5f2f1cd4b46f6de97f5de089ccdc401d90579e0e9ab4185f",
+          "sha1": "aa9e6bc134b73dd2715db48e46b07262378ada7b",
+          "md5": "01ee65a23a0d5c3fea6f2b8452fdecda"
+        }
+      ]
+    }
+  ]
+}

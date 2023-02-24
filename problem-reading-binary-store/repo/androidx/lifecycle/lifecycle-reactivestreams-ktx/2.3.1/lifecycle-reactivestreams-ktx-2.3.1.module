@@ -1,0 +1,111 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-reactivestreams-ktx",
+    "version": "2.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.7",
+      "buildId:": "7201951"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-reactivestreams",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-ktx-2.3.1.aar",
+          "url": "lifecycle-reactivestreams-ktx-2.3.1.aar",
+          "size": 2357,
+          "sha512": "a2df856854a3ad540b8070692ff6dd7481e378a3d55725b99abbbcad89d0f2298df059a691c7cd28a490f803696221d396e8d57b791648944bebdcc4eff5ff17",
+          "sha256": "55daac9050fb8ed601c46dcc05096dcc3ea8d2e463a92dbb9e1a875db9ef3066",
+          "sha1": "9436553f1ecfcd92148df2f4643f4124eb2c9678",
+          "md5": "0242b1b3dc8f6cba1b9611417536a75c"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-reactivestreams",
+          "version": {
+            "requires": "2.3.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.4.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-ktx-2.3.1.aar",
+          "url": "lifecycle-reactivestreams-ktx-2.3.1.aar",
+          "size": 2357,
+          "sha512": "a2df856854a3ad540b8070692ff6dd7481e378a3d55725b99abbbcad89d0f2298df059a691c7cd28a490f803696221d396e8d57b791648944bebdcc4eff5ff17",
+          "sha256": "55daac9050fb8ed601c46dcc05096dcc3ea8d2e463a92dbb9e1a875db9ef3066",
+          "sha1": "9436553f1ecfcd92148df2f4643f4124eb2c9678",
+          "md5": "0242b1b3dc8f6cba1b9611417536a75c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-reactivestreams-ktx-2.3.1-sources.jar",
+          "url": "lifecycle-reactivestreams-ktx-2.3.1-sources.jar",
+          "size": 1261,
+          "sha512": "bb0f402ed24247b2fd8e5ecbfec147427d84a8f18bf21cb5857c1fee5746e2a97febac326c894484fe6e86a515fe1bfd05c3b1538eb3f0f1cce712f280a76861",
+          "sha256": "c50b9f047a5b5d5ee5d330b3e2dc45f4ae8deca41f607d1d495792c89e731048",
+          "sha1": "23c53fd2626cac61baac62c95dec1c49046e0261",
+          "md5": "5d68075becef226fa5ce3a00a8721ea7"
+        }
+      ]
+    }
+  ]
+}

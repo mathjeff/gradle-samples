@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-livedata-ktx",
+    "version": "2.6.0-alpha04",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0-rc-1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata",
+          "version": {
+            "requires": "2.6.0-alpha04"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-core-ktx",
+          "version": {
+            "requires": "2.6.0-alpha04"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.7.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-livedata-ktx-2.6.0-alpha04.aar",
+          "url": "lifecycle-livedata-ktx-2.6.0-alpha04.aar",
+          "size": 43289,
+          "sha512": "ae352c334a81e631d483fea6c340e6ed9457ee611fdf627e487fe9bd5eeec36db831e3fda42e53407540db50a03385171eb2ea1dc3ef8f4106446813f8cc3277",
+          "sha256": "cdeefc3f64cd851ff48b00ecac77cabfc5ec784943aea3b0844b17754668d22d",
+          "sha1": "5bddef1e6c9253cb5830d4fed7554d96ef9689fa",
+          "md5": "698efea065ea8e2056fb22fc6b7e045e"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata",
+          "version": {
+            "requires": "2.6.0-alpha04"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-core-ktx",
+          "version": {
+            "requires": "2.6.0-alpha04"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.7.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata",
+          "version": {
+            "requires": "2.6.0-alpha04"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-livedata-ktx-2.6.0-alpha04.aar",
+          "url": "lifecycle-livedata-ktx-2.6.0-alpha04.aar",
+          "size": 43289,
+          "sha512": "ae352c334a81e631d483fea6c340e6ed9457ee611fdf627e487fe9bd5eeec36db831e3fda42e53407540db50a03385171eb2ea1dc3ef8f4106446813f8cc3277",
+          "sha256": "cdeefc3f64cd851ff48b00ecac77cabfc5ec784943aea3b0844b17754668d22d",
+          "sha1": "5bddef1e6c9253cb5830d4fed7554d96ef9689fa",
+          "md5": "698efea065ea8e2056fb22fc6b7e045e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-livedata-ktx-2.6.0-alpha04-sources.jar",
+          "url": "lifecycle-livedata-ktx-2.6.0-alpha04-sources.jar",
+          "size": 8807,
+          "sha512": "87e545981c55eaac3245be6f3f5e276bf7674fa4e572b036bfd9bbf9b26ed9de4cb38d8feb3e096a133fccf7e8bd5edfe4c80b18c6d330c8c23f7acbc8c1c036",
+          "sha256": "53e1de2302b539fc0dfebbbd9e63253016f7b21893c391aa325e450ec8e64c0d",
+          "sha1": "a0f3d198171cb680df2da7254118b18cd2c3c1cd",
+          "md5": "144381f3bcf658315d5a41d4641aa24b"
+        }
+      ]
+    }
+  ]
+}

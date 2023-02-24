@@ -1,0 +1,28 @@
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:8.0.0-beta03'
+  }
+}
+repositories {
+  google()
+  jcenter()
+  maven {
+    url("../../../repo")
+  }
+}
+
+apply(plugin: "com.android.library")
+
+dependencies {
+  api(project(":compose:ui:ui"))
+}
+
+android {
+  namespace "androidx.compose.foundation"
+  compileSdkVersion "android-33"
+  buildToolsVersion "33.0.1"
+}

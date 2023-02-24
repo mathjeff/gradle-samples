@@ -1,0 +1,138 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime-ktx",
+    "version": "2.4.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.4.0-beta01"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.30"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-ktx-2.4.0-beta01.aar",
+          "url": "lifecycle-runtime-ktx-2.4.0-beta01.aar",
+          "size": 79581,
+          "sha512": "57604249cb7b6214903baf2dbd01e3bdc08f1b0e3e2d49b023ff72fb40f81031eedb276bbd2e04aa3ecfa672b9b05e46f8a845e131643c644820fa62688b86f6",
+          "sha256": "95d593d0dd245d5dbddaab47712a67f067a99edfb111419a2c6c7ec975854bbc",
+          "sha1": "d3b3ca12524475c081ba2e21188168740b7aeede",
+          "md5": "5da71238155b1861cfd98bf7dfa18480"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-runtime",
+          "version": {
+            "requires": "2.4.0-beta01"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.5.30"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-ktx-2.4.0-beta01.aar",
+          "url": "lifecycle-runtime-ktx-2.4.0-beta01.aar",
+          "size": 79581,
+          "sha512": "57604249cb7b6214903baf2dbd01e3bdc08f1b0e3e2d49b023ff72fb40f81031eedb276bbd2e04aa3ecfa672b9b05e46f8a845e131643c644820fa62688b86f6",
+          "sha256": "95d593d0dd245d5dbddaab47712a67f067a99edfb111419a2c6c7ec975854bbc",
+          "sha1": "d3b3ca12524475c081ba2e21188168740b7aeede",
+          "md5": "5da71238155b1861cfd98bf7dfa18480"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-ktx-2.4.0-beta01-sources.jar",
+          "url": "lifecycle-runtime-ktx-2.4.0-beta01-sources.jar",
+          "size": 14828,
+          "sha512": "e970319d029eab328f11c9cf9f263f8aae0b958f2be8a6c6ee5fdc8e785a1ef8caf4de5e5a42e32394437d77605ebfa74d9018acba18287ecf12cdf5da809802",
+          "sha256": "9c1d28b751c500263b5d4d81caf6bd541944d91e295df85273b09e7b7d0baed3",
+          "sha1": "6d338022f8fa82c24121d5d249fe5daeeb297742",
+          "md5": "6bd895cc45fa4ff72bfb62dfa2cc7602"
+        }
+      ]
+    }
+  ]
+}

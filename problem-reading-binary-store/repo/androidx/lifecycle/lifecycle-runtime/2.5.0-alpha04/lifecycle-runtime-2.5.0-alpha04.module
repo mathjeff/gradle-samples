@@ -1,0 +1,131 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.lifecycle",
+    "module": "lifecycle-runtime",
+    "version": "2.5.0-alpha04",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.5.0-alpha04"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.5.0-alpha04.aar",
+          "url": "lifecycle-runtime-2.5.0-alpha04.aar",
+          "size": 12296,
+          "sha512": "c05ab6b992969e2a40f00535faf7a73036035714b2174a3b3f40749712332ad7e5b2ac80e23701b56a172f7aa555c82e3b47ea44483a260ef5fd3043bc675864",
+          "sha256": "45144d035dfb40177f30fcec69a48a27523fa7197ed7de8b99bea7a5080ad35f",
+          "sha1": "949f96790f5f9825966c59e3bd744f0ae9c923f6",
+          "md5": "2341a66713f9cc30df43fdeb30fcbe2f"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.arch.core",
+          "module": "core-runtime",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-common",
+          "version": {
+            "requires": "2.5.0-alpha04"
+          }
+        },
+        {
+          "group": "androidx.arch.core",
+          "module": "core-common",
+          "version": {
+            "requires": "2.1.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.5.0-alpha04.aar",
+          "url": "lifecycle-runtime-2.5.0-alpha04.aar",
+          "size": 12296,
+          "sha512": "c05ab6b992969e2a40f00535faf7a73036035714b2174a3b3f40749712332ad7e5b2ac80e23701b56a172f7aa555c82e3b47ea44483a260ef5fd3043bc675864",
+          "sha256": "45144d035dfb40177f30fcec69a48a27523fa7197ed7de8b99bea7a5080ad35f",
+          "sha1": "949f96790f5f9825966c59e3bd744f0ae9c923f6",
+          "md5": "2341a66713f9cc30df43fdeb30fcbe2f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lifecycle-runtime-2.5.0-alpha04-sources.jar",
+          "url": "lifecycle-runtime-2.5.0-alpha04-sources.jar",
+          "size": 8970,
+          "sha512": "2009c123e8c19a76eb578ab4a999257a8a815e0f576678921cb327ace677502a07c117cd74a3d88e9cc901591f3e993420a60fc7177abe2e3b08532eddb5a4cf",
+          "sha256": "7dd944be47d1245d17aae7cc656880f1d91695501955da5256c8659c6964e656",
+          "sha1": "0d255b447102736e536a28b97671c6a736c801b7",
+          "md5": "bc3ece2ea0121fea9bc2ba8334f1e80e"
+        }
+      ]
+    }
+  ]
+}
