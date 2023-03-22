@@ -1,0 +1,46 @@
+plugins {
+    id 'base'
+}
+
+def artifactsDir = file("${buildDir}/artifacts")
+
+configurations {
+    antJars
+}
+
+dependencies {
+    antJars("org.apache.ant:ant-junit:1.10.1")
+}
+
+repositories {
+    mavenCentral()
+}
+
+task unzipSomeStuff(type: Copy) {
+    dependsOn configurations.antJars
+    from {
+        configurations.antJars.resolve().collect { zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    into artifactsDir
+}
+
+task produceOtherOutput(dependsOn: [unzipSomeStuff]) {
+    doLast {
+        ant.mkdir dir: "${artifactsDir}/dirB"
+        ant.echo file: "${artifactsDir}/dirB/hello.txt", message: "Hello, world!"
+    }
+}
+
+task packageOtherOutput(type: Zip, dependsOn: produceOtherOutput) {
+    archiveFileName = 'output.zip'
+    from artifactsDir
+    include "dirB/**"
+}
+
+task debugOutputs {
+    doLast {
+        println("Sources of packageOtherOutput:")
+        println(tasks.packageOtherOutput.inputs.sourceFiles.join("\n"))
+    }
+}
