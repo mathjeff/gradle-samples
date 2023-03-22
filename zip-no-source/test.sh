@@ -7,8 +7,8 @@ function echoAndDo() {
 
 function runTest() {
   declareOutputs="$1"
-  rm .gradle build -rf
-  mkdir build
+  rm .gradle build */build -rf
+  mkdir -p build
   echo "********************************************************************************"
   echoAndDo "./gradlew packageOtherOutput debugOutputs --info -P declareOutputs='$declareOutputs' | tee build/log"
   echo "********************************************************************************"

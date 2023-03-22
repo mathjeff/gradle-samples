@@ -30,7 +30,7 @@ task produceOtherOutput(dependsOn: [unzipSomeStuff]) {
         ant.mkdir dir: "${artifactsDir}/dirB"
         ant.echo file: "${artifactsDir}/dirB/hello.txt", message: "Hello, world!"
     }
-    if (project.property("declareOutputs") != "true") {
+    if (project.hasProperty("declareOutputs") && project.property("declareOutputs") == "true") {
         outputs.dir("${artifactsDir}")
     }
 }
