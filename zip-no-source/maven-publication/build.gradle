@@ -1,0 +1,45 @@
+plugins {
+  id "java"
+  id "maven-publish"
+}
+
+def repoDir = "${project.buildDir}/repo"
+def zipDir = project.file("${project.buildDir}/zipped")
+
+def enablePreZip = project.hasProperty("preZip") && project.property("preZip") == "true"
+
+task preZipPublication(type: Zip) {
+  from repoDir
+  destinationDirectory = zipDir
+  archiveBaseName = "preZippedPublication"
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      groupId = "org.gradle.samples"
+      artifactId = "library"
+      version = "1.1"
+
+      from components.java
+    }
+  }
+
+  repositories {
+    maven {
+      url = repoDir
+    }
+  }
+}
+
+if (enablePreZip) {
+  tasks["publishMavenPublicationToMavenRepository"].dependsOn(preZipPublication)
+}
+
+task zipPublication(type: Zip) {
+  dependsOn("publishMavenPublicationToMavenRepository")
+  from repoDir
+  destinationDirectory = zipDir
+  archiveBaseName = "publication"
+}
+

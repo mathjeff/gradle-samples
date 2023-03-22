@@ -10,7 +10,7 @@ function runTest() {
   rm .gradle build */build -rf
   mkdir -p build
   echo "********************************************************************************"
-  echoAndDo "./gradlew packageOtherOutput debugOutputs --info -P declareOutputs='$declareOutputs' | tee build/log"
+  echoAndDo "GRADLE_USER_HOME=build/gradle-user-home ./gradlew packageOtherOutput debugOutputs --info -P declareOutputs='$declareOutputs' | tee build/log"
   echo "********************************************************************************"
   echo "The status of packageOtherOutput"
   grep "> Task.*packageOtherOutput" build/log
