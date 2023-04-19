@@ -1,0 +1,21 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    mavenLocal()
+  }
+}
+
+plugins {
+  id "java-library"
+}
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+if (!project.hasProperty("buildSrcDep")) {
+  dependencies { deps ->
+    deps.api("org.apache.jena:jena-core:4.7.0")
+  }
+}

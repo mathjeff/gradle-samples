@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- To regenerate this file, run development/update-verification-metadata.sh -->
+<verification-metadata xmlns="https://schema.gradle.org/dependency-verification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://schema.gradle.org/dependency-verification https://schema.gradle.org/dependency-verification/dependency-verification-1.2.xsd">
+   <configuration>
+      <verify-metadata>true</verify-metadata>
+      <verify-signatures>true</verify-signatures>
+      <key-servers enabled="false">
+          <key-server uri="https://keyserver.ubuntu.com"/>
+      </key-servers>
+      <trusted-keys>
+         <trusted-key id="0cde80149711eb46dff17ae421a24b3f8b0f594a" group="org.apache"/>
+         <trusted-key id="190d5a957ff22273e601f7a7c92c5fec70161c62">
+            <trusting group="org.apache"/>
+         </trusted-key>
+         <trusted-key id="6bdaca2c0493cca133b372d09c4f7e9d98b1cc53" group="org.apache"/>
+         <trusted-key id="998af0e2b935996f5cebd56b9b1fda9f3c062231">
+            <trusting group="org.apache"/>
+            <trusting group="org.apache.maven"/>
+         </trusted-key>
+         <trusted-key id="ba926f64ca647b6d853a38672e2010f8a7ff4a41" group="org.apache"/>
+         <trusted-key id="da7a1bb85b19e4fb05073431205c8673dc742c7c">
+            <trusting group="org.apache"/>
+         </trusted-key>
+         <trusted-key id="f254b35617dc255d9344bcfa873a8e86b4372146">
+            <trusting group="org.apache"/>
+         </trusted-key>
+         <trusted-key id="fa77dcfef2ee6eb2debedd2c012579464d01c06a">
+            <trusting group="org.apache"/>
+         </trusted-key>
+      </trusted-keys>
+   </configuration>
+</verification-metadata>
