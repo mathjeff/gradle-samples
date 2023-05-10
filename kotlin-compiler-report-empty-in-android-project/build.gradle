@@ -1,0 +1,28 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    google()
+  }
+}
+
+plugins {
+    //id("com.android.library") version "8.0.0"
+    id("com.android.library") version "8.1.0-alpha09"
+    id("org.jetbrains.kotlin.android") version "1.8.21"
+}
+
+repositories {
+  mavenCentral()
+  google()
+}
+
+android {
+  compileSdkVersion "android-33"
+  namespace "example"
+
+  compileOptions {
+    sourceCompatibility = 17
+    targetCompatibility = 17
+  }
+}
+
