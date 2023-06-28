@@ -1,0 +1,89 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
+
+buildscript {
+  dependencies {
+    classpath "com.android.tools.build:gradle:7.3.0"
+  }
+  repositories {
+    jcenter()
+    google()
+  }
+}
+
+
+plugins {
+  id("org.jetbrains.kotlin.multiplatform") version "1.8.21"
+}
+
+repositories {
+  jcenter()
+  google()
+  maven {
+    url "${rootProject.projectDir}/repo"
+  }
+}
+
+project.plugins.apply(KotlinMultiplatformPluginWrapper)
+project.plugins.apply("android-library")
+
+configurations.create("kotlinPlugin")
+dependencies {
+  kotlinPlugin "androidx.compose.compiler:compiler:1.4.7"
+}
+
+project.tasks.withType(KotlinCompile).configureEach { compile ->
+  compile.doFirst {
+    def kotlinConfiguration = configurations.getByName("kotlinPlugin")
+
+    def kotlinPluginFiles = kotlinConfiguration.incoming.artifactView { view ->
+      view.attributes { attributes ->
+        attributes.attribute(
+          Attribute.of("artifactType", String),
+          ArtifactTypeDefinition.JAR_TYPE
+        )
+      }
+    }.files
+
+    def kotlinPluginJar = kotlinPluginFiles.first()
+    compile.kotlinOptions.freeCompilerArgs += ("-Xplugin=" + kotlinPluginJar)
+  }
+  compile.kotlinOptions.jvmTarget = "1.8"
+}
+
+def findExtensionByType(t) {
+  return project.extensions.findByType(t)
+}
+
+def kotlinExtension = project.extensions.kotlin
+
+System.out.println("build.gradle kotlinExtension = " + kotlinExtension)
+
+kotlinExtension.jvm("desktop") {
+}
+
+kotlinExtension.sourceSets {
+
+    commonMain {
+        dependencies {
+            implementation("org.jetbrains.kotlin:kotlin-stdlib-common:1.8.21")
+
+            api(project(":compose:ui:ui"))
+            implementation("androidx.compose.runtime:runtime:0.0.0-repro01")
+        }
+    }
+
+    jvmMain {
+        dependsOn(commonMain)
+        dependencies {
+        }
+    }
+}
+
+android {
+    namespace "androidx.compose.foundation.layout"
+    compileSdkVersion "android-34"
+    buildToolsVersion "34.0.0"
+}
+

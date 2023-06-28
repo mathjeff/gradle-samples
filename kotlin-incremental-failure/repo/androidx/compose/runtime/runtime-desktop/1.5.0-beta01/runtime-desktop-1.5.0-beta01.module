@@ -1,0 +1,203 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../runtime/1.5.0-beta01/runtime-1.5.0-beta01.module",
+    "group": "androidx.compose.runtime",
+    "module": "runtime",
+    "version": "1.5.0-beta01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "desktopApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-desktop-1.5.0-beta01.jar",
+          "url": "runtime-desktop-1.5.0-beta01.jar",
+          "size": 1163171,
+          "sha512": "a5ccec9c21bd34086c74512ad0e09ff7f9ed4f395232f380266ef0db0a29e125141de174a0cb34dd603b022e900b2e917a13c32735da7d1a72f9f70052d70ae4",
+          "sha256": "bec5fc1f195992181a2f369ff3f9bcdb50cf7c0096f91eb7b54a3bf5a7ba7616",
+          "sha1": "0388dbe6e0bfc05d6387be5870ecad68f0f519f2",
+          "md5": "2dadef412f2b9661e9c98e9be079f16a"
+        }
+      ]
+    },
+    {
+      "name": "desktopRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.8.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.8.21"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-desktop-1.5.0-beta01.jar",
+          "url": "runtime-desktop-1.5.0-beta01.jar",
+          "size": 1163171,
+          "sha512": "a5ccec9c21bd34086c74512ad0e09ff7f9ed4f395232f380266ef0db0a29e125141de174a0cb34dd603b022e900b2e917a13c32735da7d1a72f9f70052d70ae4",
+          "sha256": "bec5fc1f195992181a2f369ff3f9bcdb50cf7c0096f91eb7b54a3bf5a7ba7616",
+          "sha1": "0388dbe6e0bfc05d6387be5870ecad68f0f519f2",
+          "md5": "2dadef412f2b9661e9c98e9be079f16a"
+        }
+      ]
+    },
+    {
+      "name": "desktopSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "1.5.0-beta01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-desktop-1.5.0-beta01-sources.jar",
+          "url": "runtime-desktop-1.5.0-beta01-sources.jar",
+          "size": 336488,
+          "sha512": "54d0b518da43d0154f25d78a0c47ddf01387b024470e8fa35fd371a283e59992cdcca10a9e85cb9250ea64f46332b2e63cf85d3383c3fc0cc3d8675d4fbafef5",
+          "sha256": "67a2192b74c519c086e5326b73f69948ef4b6d27a66b3c66ba548d8389c0795b",
+          "sha1": "cf3470fa1b09d552e128b0d5238972897182d6f8",
+          "md5": "8d2e8f32b1a140619fa9072fcfb171e0"
+        }
+      ]
+    }
+  ]
+}
