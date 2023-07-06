@@ -1,0 +1,182 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "androidx.compose.runtime",
+    "module": "runtime",
+    "version": "0.0.0-repro01",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "androidxSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "androidx-multiplatform-docs"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-0.0.0-repro01-multiplatform-sources.jar",
+          "url": "runtime-0.0.0-repro01-multiplatform-sources.jar",
+          "size": 341890,
+          "sha512": "a7da57b5d6fa2dac775e1a9941e8bb5d869e6c49f1e86a19b6b0f5c714ef52919004f970a6b8f47538393239f5efcec3820a4f6502115b1e747313ef323902c8",
+          "sha256": "1d3d3b31126c97ca1c263c66edb5d0482a205bbfdf11261bd3e5d7997af97bf0",
+          "sha1": "7300d4fe4d68dd0ab6c9768aa87a8659ecd957b4",
+          "md5": "b4fa3a00f7203dd5a1f21a8cb476f8fc"
+        }
+      ]
+    },
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-metadata-0.0.0-repro01.jar",
+          "url": "runtime-0.0.0-repro01.jar",
+          "size": 660,
+          "sha512": "b2f9847ad3b9e240fe027dd4b7bae0977964c709907294254b4906a8a4786c1c7b4d1d191aa7593985c5baac302772dcbf2933dc7173324ab645131182260d53",
+          "sha256": "1dd30ce8cca076140ed92ee748c1d35a4ac46b9da435406e353208a07267996d",
+          "sha1": "b5c589b0e46d99e25aebe48839215aaec925ae55",
+          "md5": "ba41245ca2b526249e40016327115655"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-livedata",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava2",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-rxjava3",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        },
+        {
+          "group": "androidx.compose.runtime",
+          "module": "runtime-saveable",
+          "version": {
+            "requires": "0.0.0-repro01"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "runtime-kotlin-0.0.0-repro01-sources.jar",
+          "url": "runtime-0.0.0-repro01-sources.jar",
+          "size": 321221,
+          "sha512": "6e888b4260e79bc753f5cd6a46724532bc8cbfd803aa5fde27aea2cbe832cd3db8b32a83513fe0e7fe5c03ee319a57ff61868082bdac8808d14aedab6282d17c",
+          "sha256": "7e58e1f64ae39f8eadb703469e9daa2ecca55e0294b547321ce62d03e631368c",
+          "sha1": "6456d500a7ed7eb24589456f920c491ef4cb8682",
+          "md5": "d3237d4fc8be44c4c05726c17ead912f"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../runtime-desktop/1.5.0-beta01/runtime-desktop-1.5.0-beta01.module",
+        "group": "androidx.compose.runtime",
+        "module": "runtime-desktop",
+        "version": "1.5.0-beta01"
+      }
+    }
+  ]
+}
