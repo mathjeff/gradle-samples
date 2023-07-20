@@ -1,0 +1,44 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
+
+buildscript {
+  repositories {
+    jcenter()
+    google()
+  }
+}
+
+plugins {
+  id("org.jetbrains.kotlin.multiplatform") version "1.8.21"
+}
+
+repositories {
+  jcenter()
+  google()
+}
+
+project.plugins.apply(KotlinMultiplatformPluginWrapper)
+
+project.tasks.withType(KotlinCompile).configureEach { compile ->
+  compile.kotlinOptions.jvmTarget = "1.8"
+}
+
+def kotlinExtension = project.extensions.kotlin
+
+kotlinExtension.jvm("desktop") {
+}
+
+kotlinExtension.sourceSets {
+  commonMain {
+    dependencies {
+      implementation("org.jetbrains.kotlin:kotlin-stdlib-common:1.8.21")
+    }
+  }
+}
+
+if (project.hasProperty("overrideBuildDir")) {
+  def overrideBuildDir=project.properties["overrideBuildDir"]
+
+  project.buildDir = "../../../$overrideBuildDir"
+}
